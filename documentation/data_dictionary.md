@@ -8,15 +8,17 @@ The intended analytical grain of the dataset is:
 
 > **One row = one employee**
 
+The final analysis-ready Excel table is:
+
+`tblEmployees`
+
 The dataset contains information covering employee demographics, employment characteristics, compensation, performance, workload, development, employee experience and resignation.
 
-This document provides a high-level definition of the original dataset fields.
-
-Derived analytical fields and data-quality results will be documented after the data preparation phase has been completed.
+This document defines the original dataset fields and the derived analytical fields created during data preparation.
 
 ---
 
-## Original Fields
+# Original Fields
 
 | Field | Description | Analytical Role |
 |---|---|---|
@@ -43,7 +45,148 @@ Derived analytical fields and data-quality results will be documented after the 
 
 ---
 
-## Field Groupings
+# Derived Analytical Fields
+
+The following fields were created during Phase 2 to support standardised workforce analysis.
+
+| Field | Description | Purpose |
+|---|---|---|
+| `Duplicate_ID_Check` | Helper field used to identify potential duplicate Employee IDs | Data-quality validation |
+| `Age_Group` | Categorises employees into age bands | Demographic segmentation |
+| `Tenure_Group` | Categorises employees according to years at the company | Tenure and retention segmentation |
+| `Salary_Band` | Categorises employees according to monthly salary ranges | Compensation segmentation |
+| `Performance_Category` | Converts the numerical performance score into descriptive categories | Performance segmentation |
+| `Promotion_Flag` | Binary indicator identifying employees with one or more recorded promotions | Promotion analysis |
+| `Resignation_Flag` | Binary indicator derived from the `Resigned` field | Retention analysis |
+
+---
+
+# Derived Field Definitions
+
+## Age Group
+
+Employees are grouped into:
+
+- `22-29`
+- `30-39`
+- `40-49`
+- `50+`
+
+Validation result:
+
+**100,000 employees**
+
+---
+
+## Tenure Group
+
+Employees are grouped into:
+
+- `0-2 Years`
+- `3-5 Years`
+- `6-10 Years`
+- `11+ Years`
+
+Validation results:
+
+| Tenure Group | Employees |
+|---|---:|
+| 0-2 Years | 30,373 |
+| 3-5 Years | 29,930 |
+| 6-10 Years | 39,697 |
+| 11+ Years | 0 |
+| **Total** | **100,000** |
+
+The absence of employees in the `11+ Years` category reflects the distribution of the source dataset rather than a formula error.
+
+---
+
+## Salary Band
+
+Employees are grouped into:
+
+- `Lower`
+- `Lower-Middle`
+- `Middle`
+- `Upper-Middle`
+- `Higher`
+
+Validation results:
+
+| Salary Band | Employees |
+|---|---:|
+| Lower | 14,289 |
+| Lower-Middle | 20,129 |
+| Middle | 17,151 |
+| Upper-Middle | 25,783 |
+| Higher | 22,648 |
+| **Total** | **100,000** |
+
+---
+
+## Performance Category
+
+The numerical performance score is converted into descriptive categories:
+
+| Performance Score | Performance Category |
+|---:|---|
+| 1 | Very Low |
+| 2 | Low |
+| 3 | Moderate |
+| 4 | High |
+| 5 | Very High |
+
+Validation results:
+
+| Performance Category | Employees |
+|---|---:|
+| Very Low | 19,940 |
+| Low | 20,013 |
+| Moderate | 19,999 |
+| High | 19,928 |
+| Very High | 20,120 |
+| **Total** | **100,000** |
+
+---
+
+## Promotion Flag
+
+`Promotion_Flag` provides a binary indicator based on whether an employee has recorded promotions.
+
+| Promotion Flag | Employees |
+|---|---:|
+| 0 | 33,296 |
+| 1 | 66,704 |
+| **Total** | **100,000** |
+
+---
+
+## Resignation Flag
+
+`Resignation_Flag` provides a binary indicator derived from the original `Resigned` field.
+
+| Resignation Flag | Employees |
+|---|---:|
+| 0 | 89,990 |
+| 1 | 10,010 |
+| **Total** | **100,000** |
+
+---
+
+# Salary Validation
+
+The monthly salary field was validated during Phase 2.
+
+| Metric | Result |
+|---|---:|
+| Minimum Monthly Salary | 3,850 |
+| Maximum Monthly Salary | 9,000 |
+| Average Monthly Salary | 6,403.211 |
+| Median Monthly Salary | 6,500 |
+
+---
+
+# Field Groupings
 
 The dataset can be broadly organised into the following analytical areas.
 
@@ -55,6 +198,7 @@ The dataset can be broadly organised into the following analytical areas.
 
 - `Gender`
 - `Age`
+- `Age_Group`
 - `Education_Level`
 
 ### Employment & Organisation
@@ -63,15 +207,18 @@ The dataset can be broadly organised into the following analytical areas.
 - `Job_Title`
 - `Hire_Date`
 - `Years_At_Company`
+- `Tenure_Group`
 - `Team_Size`
 
 ### Compensation
 
 - `Monthly_Salary`
+- `Salary_Band`
 
 ### Performance & Productivity
 
 - `Performance_Score`
+- `Performance_Category`
 - `Projects_Handled`
 
 ### Workload
@@ -88,6 +235,7 @@ The dataset can be broadly organised into the following analytical areas.
 
 - `Training_Hours`
 - `Promotions`
+- `Promotion_Flag`
 
 ### Employee Experience
 
@@ -96,23 +244,47 @@ The dataset can be broadly organised into the following analytical areas.
 ### Retention
 
 - `Resigned`
+- `Resignation_Flag`
+
+### Data Quality
+
+- `Duplicate_ID_Check`
 
 ---
 
-## Analytical Use
+# Data Quality Validation
 
-The dataset will be prepared and validated before being used for detailed analysis.
+Phase 2 included validation of:
 
-During the data preparation phase, additional analytical fields may be created where they provide clear analytical value.
+- Employee ID uniqueness.
+- Duplicate records.
+- Missing values.
+- Categorical consistency.
+- Numerical values.
+- Dates.
+- Formatting and text consistency.
 
-Any derived fields will be added to this document once they have been created and validated.
+The final analytical population remained:
+
+**100,000 employees**
+
+Three final population QA checks each reconciled to **100,000**, confirming that the employee population remained unchanged during preparation.
+
+No meaningful duplicate, missing-value or categorical/numerical consistency issues were identified during the validation process.
 
 ---
 
-## Data Dictionary Status
+# Data Dictionary Status
 
-**Current status: Initial dataset documentation**
+**Current status: Phase 2 Complete**
 
-The dictionary currently describes the original dataset only.
+The dictionary now documents:
 
-Data-quality findings and derived analytical fields will be documented as the project progresses.
+- The original dataset fields.
+- The derived analytical fields created during preparation.
+- Derived field definitions.
+- Validation results.
+- Salary validation results.
+- Data-quality validation results.
+
+The data dictionary will be updated again if additional analytical fields are created during later project phases.

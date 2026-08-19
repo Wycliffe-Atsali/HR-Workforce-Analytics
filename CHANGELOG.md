@@ -4,6 +4,80 @@ All significant project milestones and structural changes are documented in this
 
 ---
 
+## [0.3.0] - Phase 2 Complete
+
+### Data Preparation
+
+Phase 2 — Data Preparation & Excel Data Model was completed.
+
+The following data preparation activities were completed:
+
+- Preserved the original `Raw_Data` worksheet.
+- Created the `Clean_Data` working sheet.
+- Converted the working dataset into the Excel Table `tblEmployees`.
+- Validated Employee IDs.
+- Checked for duplicate Employee IDs.
+- Checked for missing values.
+- Checked categorical consistency.
+- Validated numerical fields.
+- Validated dates.
+- Checked formatting and text consistency.
+- Performed final data-quality checks.
+
+### Derived Analytical Fields
+
+Created and validated:
+
+- `Duplicate_ID_Check`
+- `Age_Group`
+- `Tenure_Group`
+- `Salary_Band`
+- `Performance_Category`
+- `Promotion_Flag`
+- `Resignation_Flag`
+
+### Validation
+
+The final analytical population remained:
+
+**100,000 employees**
+
+Three final quality-assurance checks reconciled to 100,000, confirming that:
+
+- The employee population remained unchanged.
+- The resignation flag reconciled to the full population.
+- The promotion flag reconciled to the full population.
+
+The `11+ Years` tenure category contained zero employees, reflecting the distribution of the dataset rather than a formula error.
+
+### Salary Validation
+
+Validated salary statistics:
+
+- Minimum salary: 3,850
+- Maximum salary: 9,000
+- Average salary: 6,403.211
+- Median salary: 6,500
+
+### Documentation
+
+Updated:
+
+- `README.md`
+- `documentation/data_dictionary.md`
+- `documentation/methodology.md`
+- `CHANGELOG.md`
+
+The completed Phase 2 Excel workbook was also prepared for inclusion in the repository.
+
+### Next Phase
+
+The project is now ready to proceed to:
+
+**Phase 3 — Workforce Analysis**
+
+---
+
 ## [0.2.0] - Phase 1 Complete
 
 ### Completed
@@ -87,10 +161,6 @@ The project is now ready to proceed to:
 ---
 
 ## Upcoming
-
-### Phase 2
-
-Prepare and validate the employee dataset for analysis.
 
 ### Phase 3
 

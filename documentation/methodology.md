@@ -62,33 +62,107 @@ The project will distinguish between observed associations and causal relationsh
 
 ## Phase 2 — Data Preparation & Excel Data Model
 
-The second phase will prepare the employee dataset for analysis.
+Phase 2 prepared the employee dataset for workforce analysis while preserving the original data.
 
-Planned activities include:
+### Data Preparation Workflow
 
-- Preserving the original raw data.
-- Creating a working copy.
-- Creating the analysis-ready Excel table.
-- Validating employee records.
-- Checking Employee ID uniqueness.
-- Checking duplicate records.
-- Checking missing values.
-- Validating categorical fields.
-- Validating numerical fields.
-- Validating dates.
-- Standardising formatting.
-- Creating useful analytical derived fields.
-- Performing final data-quality checks.
+The original `Raw_Data` worksheet was preserved.
 
-The intended analytical table will be:
+A working copy was created as:
+
+`Clean_Data`
+
+The working dataset was converted into an Excel Table named:
 
 `tblEmployees`
 
-The intended analytical grain is:
+The analytical grain remained:
 
 > **One row = one employee**
 
-**Status: Upcoming**
+### Data Validation
+
+The dataset was checked for:
+
+- Employee ID validity.
+- Duplicate Employee IDs.
+- Missing values.
+- Categorical consistency.
+- Numerical validity.
+- Date validity.
+- Formatting and text consistency.
+- General data-quality issues.
+
+No meaningful duplicate, missing-value or categorical/numerical consistency issues were identified during the validation process.
+
+The helper field:
+
+`Duplicate_ID_Check`
+
+was retained because it supports the Data Quality worksheet and validation process.
+
+### Derived Analytical Fields
+
+The following analytical fields were created:
+
+- `Duplicate_ID_Check`
+- `Age_Group`
+- `Tenure_Group`
+- `Salary_Band`
+- `Performance_Category`
+- `Promotion_Flag`
+- `Resignation_Flag`
+
+These fields provide standardised categories and indicators for subsequent workforce analysis.
+
+### Derived Field Validation
+
+The derived fields were validated against the full employee population.
+
+The validation results were:
+
+| Derived Field | Validation Result |
+|---|---:|
+| Age Group | 100,000 |
+| Tenure Group | 100,000 |
+| Performance Category | 100,000 |
+| Promotion Flag | 100,000 |
+| Resignation Flag | 100,000 |
+| Salary Band | 100,000 |
+
+The `11+ Years` tenure category contained zero employees. This reflects the distribution of the source dataset and does not indicate a formula error.
+
+### Final Quality Assurance
+
+Three final population checks were performed.
+
+Each reconciled to:
+
+**100,000 employees**
+
+This confirmed that:
+
+- The employee population remained unchanged.
+- The resignation flag reconciled to the full population.
+- The promotion flag reconciled to the full population.
+
+### Phase 2 Outcome
+
+The dataset is now considered analysis-ready.
+
+The final analytical population is:
+
+**100,000 employees**
+
+The final analytical grain is:
+
+> **One row = one employee**
+
+The final analytical table is:
+
+`tblEmployees`
+
+**Status: Complete**
 
 ---
 
@@ -113,10 +187,13 @@ The analysis will focus on:
 
 - Distributions
 - Comparisons
-- Trends where applicable
 - Relationships between variables
 - Workforce segments
 - Potential areas requiring management attention
+
+The analysis will follow the general workflow:
+
+**Business Question → Metric Definition → Excel Analysis → Result → Interpretation → Business Implication**
 
 **Status: Upcoming**
 
@@ -232,21 +309,10 @@ This ensures that the repository accurately reflects the actual development of t
 
 ---
 
-# Phase 1 Completion
+# Phase 2 Completion
 
-Phase 1 established the business and analytical foundation required before data preparation begins.
+Phase 2 established the analysis-ready Excel data model.
 
-The project now has:
+The original dataset was preserved, validated and transformed into the working table `tblEmployees` while maintaining the original population of **100,000 employees**.
 
-- A defined business scenario.
-- A defined business problem.
-- Clearly stated project objectives.
-- Identified stakeholders.
-- Defined analytical perspectives.
-- Defined business questions.
-- Established analytical scope.
-- Established success criteria.
-- A six-phase project methodology.
-- Analytical principles governing the project.
-
-The project is ready to proceed to **Phase 2 — Data Preparation & Excel Data Model**.
+The completed preparation process provides a validated foundation for the workforce analysis that will be conducted in Phase 3.
