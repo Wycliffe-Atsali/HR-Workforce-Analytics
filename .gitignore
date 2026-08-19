@@ -1,0 +1,18 @@
+# Microsoft Excel temporary files
+~$*.xlsx
+~$*.xls
+~$*.xlsm
+
+# Excel backup files
+*.xlk
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
