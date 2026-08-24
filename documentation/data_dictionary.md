@@ -4,185 +4,137 @@
 
 The HR Workforce Analytics project uses a synthetic employee-level workforce dataset containing **100,000 employee records**.
 
-The intended analytical grain of the dataset is:
+The analytical grain of the dataset is:
 
 > **One row = one employee**
 
-The final analysis-ready Excel table is:
-
-`tblEmployees`
-
 The dataset contains information covering employee demographics, employment characteristics, compensation, performance, workload, development, employee experience and resignation.
 
-This document defines the original dataset fields and the derived analytical fields created during data preparation.
+This document defines the original dataset fields and the additional analytical fields created during the project.
 
 ---
 
 # Original Fields
 
-| Field | Description | Analytical Role |
-|---|---|---|
-| `Employee_ID` | Unique identifier assigned to each employee | Employee identification |
-| `Department` | Employee's organisational department | Workforce segmentation |
-| `Gender` | Employee gender category | Demographic analysis |
-| `Age` | Employee age | Demographic analysis |
-| `Job_Title` | Employee's job role or title | Workforce structure |
-| `Hire_Date` | Date the employee joined the organisation | Employment history |
-| `Years_At_Company` | Number of years the employee has been with the organisation | Tenure and retention analysis |
-| `Education_Level` | Employee's education level | Workforce demographics |
-| `Performance_Score` | Employee performance score | Performance analysis |
-| `Monthly_Salary` | Employee monthly salary | Compensation analysis |
-| `Work_Hours_Per_Week` | Average number of hours worked per week | Workload analysis |
-| `Projects_Handled` | Number of projects handled by the employee | Productivity analysis |
-| `Overtime_Hours` | Number of overtime hours worked | Workload analysis |
-| `Sick_Days` | Number of sick days recorded | Workforce experience and workload analysis |
-| `Remote_Work_Frequency` | Frequency of remote work | Work arrangement analysis |
-| `Team_Size` | Number of employees within the employee's team | Organisational analysis |
-| `Training_Hours` | Number of training hours received | Employee development analysis |
-| `Promotions` | Number of promotions received | Career progression analysis |
-| `Employee_Satisfaction_Score` | Employee satisfaction score | Employee experience analysis |
-| `Resigned` | Indicates whether the employee has resigned | Retention analysis |
+| Field                         | Description                                                 | Analytical Role                            |
+| ----------------------------- | ----------------------------------------------------------- | ------------------------------------------ |
+| `Employee_ID`                 | Unique identifier assigned to each employee                 | Employee identification                    |
+| `Department`                  | Employee's organisational department                        | Workforce segmentation                     |
+| `Gender`                      | Employee gender category                                    | Demographic analysis                       |
+| `Age`                         | Employee age                                                | Demographic analysis                       |
+| `Job_Title`                   | Employee's job role or title                                | Workforce structure                        |
+| `Hire_Date`                   | Date the employee joined the organisation                   | Employment history                         |
+| `Years_At_Company`            | Number of years the employee has been with the organisation | Tenure and retention analysis              |
+| `Education_Level`             | Employee's education level                                  | Workforce demographics                     |
+| `Performance_Score`           | Employee performance score                                  | Performance analysis                       |
+| `Monthly_Salary`              | Employee monthly salary                                     | Compensation analysis                      |
+| `Work_Hours_Per_Week`         | Average number of hours worked per week                     | Workload analysis                          |
+| `Projects_Handled`            | Number of projects handled by the employee                  | Productivity analysis                      |
+| `Overtime_Hours`              | Number of overtime hours worked                             | Workload analysis                          |
+| `Sick_Days`                   | Number of sick days recorded                                | Workforce experience and workload analysis |
+| `Remote_Work_Frequency`       | Frequency of remote work                                    | Work arrangement analysis                  |
+| `Team_Size`                   | Number of employees within the employee's team              | Organisational analysis                    |
+| `Training_Hours`              | Number of training hours received                           | Employee development analysis              |
+| `Promotions`                  | Number of promotions received                               | Career progression analysis                |
+| `Employee_Satisfaction_Score` | Employee satisfaction score                                 | Employee experience analysis               |
+| `Resigned`                    | Indicates whether the employee has resigned                 | Retention analysis                         |
 
 ---
 
-# Derived Analytical Fields
+# Phase 2 Derived Fields
 
-The following fields were created during Phase 2 to support standardised workforce analysis.
+The following fields were created during Phase 2 — Data Preparation & Excel Data Model.
 
-| Field | Description | Purpose |
-|---|---|---|
-| `Duplicate_ID_Check` | Helper field used to identify potential duplicate Employee IDs | Data-quality validation |
-| `Age_Group` | Categorises employees into age bands | Demographic segmentation |
-| `Tenure_Group` | Categorises employees according to years at the company | Tenure and retention segmentation |
-| `Salary_Band` | Categorises employees according to monthly salary ranges | Compensation segmentation |
-| `Performance_Category` | Converts the numerical performance score into descriptive categories | Performance segmentation |
-| `Promotion_Flag` | Binary indicator identifying employees with one or more recorded promotions | Promotion analysis |
-| `Resignation_Flag` | Binary indicator derived from the `Resigned` field | Retention analysis |
-
----
-
-# Derived Field Definitions
-
-## Age Group
-
-Employees are grouped into:
-
-- `22-29`
-- `30-39`
-- `40-49`
-- `50+`
-
-Validation result:
-
-**100,000 employees**
+| Field                  | Purpose                                                                 |
+| ---------------------- | ----------------------------------------------------------------------- |
+| `Duplicate_ID_Check`   | Identifies potential duplicate Employee IDs for data-quality validation |
+| `Age_Group`            | Groups employees into analytical age ranges                             |
+| `Tenure_Group`         | Groups employees by length of service                                   |
+| `Salary_Band`          | Groups monthly salaries into analytical compensation bands              |
+| `Performance_Category` | Converts numerical performance scores into descriptive categories       |
+| `Promotion_Flag`       | Indicates whether an employee has recorded at least one promotion       |
+| `Resignation_Flag`     | Converts resignation status into a binary analytical flag               |
 
 ---
 
-## Tenure Group
+# Phase 3 Analytical Grouping Fields
 
-Employees are grouped into:
+The following fields were created during Phase 3 — Workforce Analysis.
 
-- `0-2 Years`
-- `3-5 Years`
-- `6-10 Years`
-- `11+ Years`
+These fields were created to support descriptive analysis and business-friendly grouping of workforce measures.
 
-Validation results:
-
-| Tenure Group | Employees |
-|---|---:|
-| 0-2 Years | 30,373 |
-| 3-5 Years | 29,930 |
-| 6-10 Years | 39,697 |
-| 11+ Years | 0 |
-| **Total** | **100,000** |
-
-The absence of employees in the `11+ Years` category reflects the distribution of the source dataset rather than a formula error.
+| Field                | Source Field                  | Purpose                                                          |
+| -------------------- | ----------------------------- | ---------------------------------------------------------------- |
+| `Satisfaction_Group` | `Employee_Satisfaction_Score` | Groups satisfaction scores into five analytical levels           |
+| `Work_Hours_Group`   | `Work_Hours_Per_Week`         | Groups weekly work hours into meaningful workload ranges         |
+| `Overtime_Group`     | `Overtime_Hours`              | Groups overtime hours into business-friendly workload categories |
 
 ---
 
-## Salary Band
+## Satisfaction_Group
 
-Employees are grouped into:
+**Purpose:** Convert employee satisfaction scores into five analytical levels.
 
-- `Lower`
-- `Lower-Middle`
-- `Middle`
-- `Upper-Middle`
-- `Higher`
+**Formula:**
 
-Validation results:
+```excel
+=ROUND([@[Employee_Satisfaction_Score]],0)
+```
 
-| Salary Band | Employees |
-|---|---:|
-| Lower | 14,289 |
-| Lower-Middle | 20,129 |
-| Middle | 17,151 |
-| Upper-Middle | 25,783 |
-| Higher | 22,648 |
-| **Total** | **100,000** |
+**Groups produced:**
 
----
-
-## Performance Category
-
-The numerical performance score is converted into descriptive categories:
-
-| Performance Score | Performance Category |
-|---:|---|
-| 1 | Very Low |
-| 2 | Low |
-| 3 | Moderate |
-| 4 | High |
-| 5 | Very High |
-
-Validation results:
-
-| Performance Category | Employees |
-|---|---:|
-| Very Low | 19,940 |
-| Low | 20,013 |
-| Moderate | 19,999 |
-| High | 19,928 |
-| Very High | 20,120 |
-| **Total** | **100,000** |
+| Satisfaction ScoreGroup |   |
+| ----------------------- | - |
+| 1.00-1.49               | 1 |
+| 1.50-2.49               | 2 |
+| 2.50-3.49               | 3 |
+| 3.50-4.49               | 4 |
+| 4.50-5.00               | 5 |
 
 ---
 
-## Promotion Flag
+## Work_Hours_Group
 
-`Promotion_Flag` provides a binary indicator based on whether an employee has recorded promotions.
+**Purpose:** Group weekly work hours into meaningful workload ranges.
 
-| Promotion Flag | Employees |
-|---|---:|
-| 0 | 33,296 |
-| 1 | 66,704 |
-| **Total** | **100,000** |
+**Formula:**
+
+```excel
+=IF([@[Work_Hours_Per_Week]]<=34,"30-34 Hours",IF([@[Work_Hours_Per_Week]]<=39,"35-39 Hours",IF([@[Work_Hours_Per_Week]]<=44,"40-44 Hours",IF([@[Work_Hours_Per_Week]]<=49,"45-49 Hours",IF([@[Work_Hours_Per_Week]]<=54,"50-54 Hours","55-60 Hours")))))
+```
+
+**Groups produced:**
+
+| Work HoursGroup |             |
+| --------------- | ----------- |
+| 30-34           | 30-34 Hours |
+| 35-39           | 35-39 Hours |
+| 40-44           | 40-44 Hours |
+| 45-49           | 45-49 Hours |
+| 50-54           | 50-54 Hours |
+| 55-60           | 55-60 Hours |
 
 ---
 
-## Resignation Flag
+## Overtime_Group
 
-`Resignation_Flag` provides a binary indicator derived from the original `Resigned` field.
+**Purpose:** Group overtime hours into meaningful workload categories.
 
-| Resignation Flag | Employees |
-|---|---:|
-| 0 | 89,990 |
-| 1 | 10,010 |
-| **Total** | **100,000** |
+**Formula:**
 
----
+```excel
+=IF([@[Overtime_Hours]]<=5,"Low Overtime",IF([@[Overtime_Hours]]<=10,"Moderate Overtime",IF([@[Overtime_Hours]]<=15,"High Overtime",IF([@[Overtime_Hours]]<=20,"Very High Overtime","Excessive Overtime"))))
+```
 
-# Salary Validation
+**Groups produced:**
 
-The monthly salary field was validated during Phase 2.
-
-| Metric | Result |
-|---|---:|
-| Minimum Monthly Salary | 3,850 |
-| Maximum Monthly Salary | 9,000 |
-| Average Monthly Salary | 6,403.211 |
-| Median Monthly Salary | 6,500 |
+| Overtime HoursGroup |                    |
+| ------------------- | ------------------ |
+| 0-5                 | Low Overtime       |
+| 6-10                | Moderate Overtime  |
+| 11-15               | High Overtime      |
+| 16-20               | Very High Overtime |
+| 21-29               | Excessive Overtime |
 
 ---
 
@@ -190,101 +142,79 @@ The monthly salary field was validated during Phase 2.
 
 The dataset can be broadly organised into the following analytical areas.
 
-### Employee Identification
+## Employee Identification
 
-- `Employee_ID`
+* `Employee_ID`
 
-### Demographics
+## Demographics
 
-- `Gender`
-- `Age`
-- `Age_Group`
-- `Education_Level`
+* `Gender`
+* `Age`
+* `Age_Group`
+* `Education_Level`
 
-### Employment & Organisation
+## Employment & Organisation
 
-- `Department`
-- `Job_Title`
-- `Hire_Date`
-- `Years_At_Company`
-- `Tenure_Group`
-- `Team_Size`
+* `Department`
+* `Job_Title`
+* `Hire_Date`
+* `Years_At_Company`
+* `Tenure_Group`
+* `Team_Size`
 
-### Compensation
+## Compensation
 
-- `Monthly_Salary`
-- `Salary_Band`
+* `Monthly_Salary`
+* `Salary_Band`
 
-### Performance & Productivity
+## Performance & Productivity
 
-- `Performance_Score`
-- `Performance_Category`
-- `Projects_Handled`
+* `Performance_Score`
+* `Performance_Category`
+* `Projects_Handled`
 
-### Workload
+## Workload
 
-- `Work_Hours_Per_Week`
-- `Overtime_Hours`
-- `Sick_Days`
+* `Work_Hours_Per_Week`
+* `Work_Hours_Group`
+* `Overtime_Hours`
+* `Overtime_Group`
+* `Sick_Days`
 
-### Work Arrangement
+## Work Arrangement
 
-- `Remote_Work_Frequency`
+* `Remote_Work_Frequency`
 
-### Development & Career Progression
+## Development & Career Progression
 
-- `Training_Hours`
-- `Promotions`
-- `Promotion_Flag`
+* `Training_Hours`
+* `Promotions`
+* `Promotion_Flag`
 
-### Employee Experience
+## Employee Experience
 
-- `Employee_Satisfaction_Score`
+* `Employee_Satisfaction_Score`
+* `Satisfaction_Group`
 
-### Retention
+## Retention
 
-- `Resigned`
-- `Resignation_Flag`
+* `Resigned`
+* `Resignation_Flag`
 
-### Data Quality
+## Data Quality
 
-- `Duplicate_ID_Check`
-
----
-
-# Data Quality Validation
-
-Phase 2 included validation of:
-
-- Employee ID uniqueness.
-- Duplicate records.
-- Missing values.
-- Categorical consistency.
-- Numerical values.
-- Dates.
-- Formatting and text consistency.
-
-The final analytical population remained:
-
-**100,000 employees**
-
-Three final population QA checks each reconciled to **100,000**, confirming that the employee population remained unchanged during preparation.
-
-No meaningful duplicate, missing-value or categorical/numerical consistency issues were identified during the validation process.
+* `Duplicate_ID_Check`
 
 ---
 
 # Data Dictionary Status
 
-**Current status: Phase 2 Complete**
+**Current status: Updated through Phase 3 — Workforce Analysis**
 
-The dictionary now documents:
+The dictionary documents:
 
-- The original dataset fields.
-- The derived analytical fields created during preparation.
-- Derived field definitions.
-- Validation results.
-- Salary validation results.
-- Data-quality validation results.
+* The original dataset fields
+* Phase 2 derived fields
+* Phase 3 analytical grouping fields
 
-The data dictionary will be updated again if additional analytical fields are created during later project phases.
+The analytical population remains **100,000 employees**, with the analytical grain remaining **one row = one employee**.

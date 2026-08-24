@@ -2,7 +2,7 @@
 
 ## Overview
 
-The HR Workforce Analytics project follows a structured six-phase analytical workflow designed to move from a defined business problem to evidence-based HR recommendations.
+The HR Workforce Analytics project follows a structured six-phase analytical workflow designed to move from a defined business problem to evidence-based HR insights and recommendations.
 
 The methodology is intended to ensure that:
 
@@ -11,6 +11,7 @@ The methodology is intended to ensure that:
 - Analytical decisions are documented.
 - Findings are supported by evidence.
 - Insights are translated into practical business recommendations.
+- Observed patterns are not incorrectly presented as causal relationships.
 
 The overall workflow is:
 
@@ -54,7 +55,7 @@ The primary stakeholders identified are:
 - Department Managers
 - Senior Management
 
-The project will distinguish between observed associations and causal relationships throughout the analysis.
+The project distinguishes between observed associations and causal relationships throughout the analysis.
 
 **Status: Complete**
 
@@ -148,7 +149,7 @@ This confirmed that:
 
 ### Phase 2 Outcome
 
-The dataset is now considered analysis-ready.
+The dataset was confirmed as analysis-ready.
 
 The final analytical population is:
 
@@ -168,52 +169,162 @@ The final analytical table is:
 
 ## Phase 3 — Workforce Analysis
 
-The third phase will convert the prepared employee dataset into structured workforce analysis.
+The third phase converted the prepared employee dataset into structured workforce analysis.
 
-The analysis will examine areas such as:
+The analysis examined:
 
-- Workforce composition
-- Demographics
-- Department structure
-- Compensation
-- Performance
-- Workload and productivity
-- Training and development
-- Promotions
-- Employee satisfaction
-- Resignation and retention
+- Workforce composition.
+- Demographics.
+- Department structure.
+- Compensation.
+- Performance.
+- Workload.
+- Career development.
+- Employee experience.
+- Resignation and retention.
 
-The analysis will focus on:
+The analysis focused on:
 
-- Distributions
-- Comparisons
-- Relationships between variables
-- Workforce segments
-- Potential areas requiring management attention
+- Distributions.
+- Comparisons.
+- Relationships between variables.
+- Workforce segments.
+- Potential areas requiring management attention.
 
-The analysis will follow the general workflow:
+The general analytical structure followed was:
 
-**Business Question → Metric Definition → Excel Analysis → Result → Interpretation → Business Implication**
+**Business Question → Metric Definition → Excel Calculation / PivotTable → Result → Interpretation → Business Implication**
 
-**Status: Upcoming**
+### Analytical Grouping Fields
+
+Additional analytical grouping fields were created where they improved the interpretation of numerical workforce measures:
+
+- `Satisfaction_Group`
+- `Work_Hours_Group`
+- `Overtime_Group`
+
+These fields were used to convert continuous or detailed numerical values into more meaningful business categories for comparison and interpretation.
+
+### Satisfaction Grouping
+
+`Satisfaction_Group` was created from:
+
+`Employee_Satisfaction_Score`
+
+The field grouped employee satisfaction into five standardised levels:
+
+- 1
+- 2
+- 3
+- 4
+- 5
+
+This supported comparisons between satisfaction levels and workforce outcomes such as resignation.
+
+### Work Hours Grouping
+
+`Work_Hours_Group` was created from:
+
+`Work_Hours_Per_Week`
+
+The field grouped weekly working hours into the following categories:
+
+- 30-34 Hours
+- 35-39 Hours
+- 40-44 Hours
+- 45-49 Hours
+- 50-54 Hours
+- 55-60 Hours
+
+This supported the analysis of workload patterns across meaningful work-hour ranges.
+
+### Overtime Grouping
+
+`Overtime_Group` was created from:
+
+`Overtime_Hours`
+
+The field grouped overtime into the following workload categories:
+
+- Low Overtime
+- Moderate Overtime
+- High Overtime
+- Very High Overtime
+- Excessive Overtime
+
+This supported comparisons between overtime levels and employee outcomes.
+
+### Analytical Findings
+
+The Phase 3 analysis identified the clearest selected analytical pattern in the relationship between performance category and average monthly salary.
+
+Other analysed measures generally showed limited variation across the workforce segments examined.
+
+These included:
+
+- Promotion rates across tenure groups, departments and performance categories.
+- Average training hours across departments.
+- Resignation rates across demographic, compensation, performance, promotion, satisfaction and workload segments.
+
+The overall promotion rate was:
+
+**66.70%**
+
+The overall resignation rate was:
+
+**10.01%**
+
+The analysis found no major segment-level differences in resignation rates across the workforce characteristics examined.
+
+The absence of material differences was treated as a valid analytical finding rather than being replaced with unsupported explanations.
+
+### Analytical Interpretation
+
+Phase 3 followed a descriptive and association-based analytical approach.
+
+Observed patterns were interpreted as evidence of relationships or differences within the available dataset, but were not interpreted as proof of causation.
+
+Where differences between workforce segments were small or not materially meaningful, this was documented as part of the analytical conclusion.
+
+### Phase 3 Outcome
+
+Phase 3 produced a structured workforce analysis and identified the most relevant findings for reporting.
+
+The selected findings focused on:
+
+- Workforce composition.
+- Compensation by performance.
+- Overall compensation benchmarks.
+- Promotion rates.
+- Resignation rates.
+- The absence of material differences across several major workforce segments.
+
+These findings provide the foundation for the executive reporting and dashboard stage.
+
+**Status: Complete**
 
 ---
 
 ## Phase 4 — HR Reporting & Dashboard
 
-The fourth phase will translate the most important analytical findings into an executive-friendly reporting layer.
+The fourth phase will translate the most important analytical findings into an executive-friendly Excel reporting layer and dashboard.
 
-The reporting stage is expected to focus on:
+The reporting stage will focus on the findings that provide the greatest business value and communicate the workforce story clearly.
 
-- Workforce KPIs
-- Workforce composition
-- Compensation indicators
-- Performance indicators
-- Employee experience indicators
-- Retention indicators
-- Important workforce comparisons
+The reporting is expected to include:
 
-The objective will be to create concise reporting that supports HR decision-making rather than simply presenting a large number of charts.
+- Workforce KPIs.
+- Workforce composition.
+- Compensation benchmarks.
+- Compensation by performance.
+- Promotion indicators.
+- Resignation indicators.
+- Selected comparisons between workforce segments.
+- Key analytical conclusions.
+
+The dashboard will prioritise clarity and business relevance rather than attempting to display every analysis completed during Phase 3.
+
+The objective is to create concise reporting that supports HR decision-making rather than simply presenting a large number of charts.
 
 **Status: Upcoming**
 
@@ -221,13 +332,21 @@ The objective will be to create concise reporting that supports HR decision-maki
 
 ## Phase 5 — Insights & Business Recommendations
 
-The fifth phase will interpret the findings produced during the workforce analysis.
+The fifth phase will interpret the findings produced during the workforce analysis and reporting stages.
 
 The analytical reasoning framework will be:
 
 **Finding → Evidence → Business Meaning → Potential Implication → Recommendation**
 
-Recommendations will be based on observed evidence and will avoid unsupported causal claims.
+Recommendations will:
+
+- Be based on observed evidence.
+- Reflect the limitations of the available dataset.
+- Avoid unsupported causal claims.
+- Distinguish between strong findings and areas requiring further investigation.
+- Focus on practical HR relevance.
+
+Where the analysis identifies no material differences between workforce segments, this conclusion will also be incorporated into the overall business interpretation where relevant.
 
 **Status: Upcoming**
 
@@ -248,6 +367,8 @@ Planned activities include:
 - Final project summary.
 - Portfolio presentation.
 - Project retrospective.
+
+The final review will confirm that the workbook, documentation and repository accurately represent the completed analytical workflow.
 
 **Status: Upcoming**
 
@@ -279,11 +400,15 @@ Cleaning and transformation should be performed in a separate working or analysi
 
 Derived fields should only be created when they provide clear analytical value.
 
+Analytical grouping fields should simplify interpretation without unnecessarily distorting the underlying data.
+
 ---
 
 ## 5. Association Does Not Equal Causation
 
 Observed relationships between employee characteristics should not automatically be interpreted as causal relationships.
+
+The project analyses patterns and associations within the available synthetic dataset.
 
 ---
 
@@ -291,15 +416,27 @@ Observed relationships between employee characteristics should not automatically
 
 The analysis should prioritise findings that could reasonably influence HR decision-making.
 
----
-
-## 7. Reproducibility
-
-Important analytical decisions and transformations should be documented so that the workflow can be understood and reproduced.
+Not every statistical or numerical difference should automatically be treated as a meaningful business finding.
 
 ---
 
-## 8. Progressive Documentation
+## 7. Meaningful Differences Matter
+
+Analytical conclusions should consider whether observed differences are materially meaningful.
+
+Where workforce segments show only small differences, the project should avoid overstating those differences.
+
+The absence of a material difference is also a valid analytical finding when supported by the data.
+
+---
+
+## 8. Reproducibility
+
+Important analytical decisions, transformations, metrics and derived fields should be documented so that the workflow can be understood and reproduced.
+
+---
+
+## 9. Progressive Documentation
 
 Project documentation will be developed alongside the analysis.
 
@@ -309,10 +446,16 @@ This ensures that the repository accurately reflects the actual development of t
 
 ---
 
-# Phase 2 Completion
+# Current Methodology Status
 
-Phase 2 established the analysis-ready Excel data model.
+The project has completed:
 
-The original dataset was preserved, validated and transformed into the working table `tblEmployees` while maintaining the original population of **100,000 employees**.
+- **Phase 1 — Project Setup & Analytical Framework**
+- **Phase 2 — Data Preparation & Excel Data Model**
+- **Phase 3 — Workforce Analysis**
 
-The completed preparation process provides a validated foundation for the workforce analysis that will be conducted in Phase 3.
+The dataset has been validated, transformed into an analysis-ready Excel data model and analysed across the major workforce perspectives defined during the project setup.
+
+The project is now ready to proceed to:
+
+**Phase 4 — HR Reporting & Dashboard**

@@ -4,6 +4,46 @@ All significant project milestones and structural changes are documented in this
 
 ---
 
+## [0.4.0] - Phase 3 Complete
+
+### Added
+
+- Completed the detailed workforce analysis.
+- Analysed workforce composition and organisational distribution.
+- Analysed demographic and tenure patterns.
+- Analysed overall compensation and compensation by performance category.
+- Analysed performance category distribution.
+- Analysed workload and work arrangement indicators.
+- Analysed promotion rates and career development patterns.
+- Analysed training patterns.
+- Analysed employee satisfaction.
+- Analysed employee resignation and retention patterns.
+- Added analytical grouping fields for satisfaction, work hours and overtime.
+- Added the Phase 3 workforce analysis documentation.
+
+### Key Findings
+
+- Identified a progressive association between performance category and average monthly salary.
+- Confirmed an overall promotion rate of 66.70%.
+- Confirmed an overall resignation rate of 10.01%.
+- Found promotion rates to be broadly consistent across departments, tenure groups and performance categories.
+- Found limited variation in training and satisfaction measures across the major segments analysed.
+- Found no major segment-level variation in resignation rates across the groups examined.
+- Confirmed that the workforce is broadly distributed across key organisational and demographic segments.
+
+### Documentation
+
+- Added `documentation/workforce_analysis.md`.
+- Updated the data dictionary with Phase 3 analytical grouping fields.
+- Updated the project methodology to record Phase 3 completion.
+- Updated the README with the completed Phase 3 status and analysis summary.
+
+### Next Phase
+
+Phase 4 will translate the strongest validated findings into an executive-friendly HR reporting layer and dashboard.
+
+---
+
 ## [0.3.0] - Phase 2 Complete
 
 ### Data Preparation
