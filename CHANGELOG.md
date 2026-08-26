@@ -4,6 +4,79 @@ All significant project milestones and structural changes are documented in this
 
 ---
 
+## [0.5.0] - Phase 4 Complete
+
+### Added
+
+- Completed the HR Reporting & Dashboard phase.
+- Created the final Excel workforce dashboard.
+- Added executive-level KPI cards.
+- Added interactive dashboard filtering using Excel slicers.
+- Connected KPI indicators to the underlying PivotTable analysis.
+- Added workforce composition visualisations.
+- Added compensation and performance visualisation.
+- Added promotion analysis visualisation.
+- Added resignation analysis visualisation.
+- Applied consistent dashboard formatting and visual design.
+- Organised dashboard charts into a structured two-row layout.
+- Added dashboard-level visual hierarchy and presentation formatting.
+
+### Dashboard KPIs
+
+The completed dashboard includes:
+
+- Total Employees
+- Average Monthly Salary
+- Median Monthly Salary
+- Promotion Rate
+- Resignation Rate
+
+The interactive KPI indicators respond to selected dashboard filters where supported by the underlying PivotTable calculations.
+
+The median monthly salary is retained as an overall workforce benchmark rather than being dynamically recalculated through the dashboard filters.
+
+### Dashboard Interactivity
+
+Two slicers were implemented to provide interactive filtering across the dashboard.
+
+The slicers allow users to analyse combinations of workforce segments, including department and gender.
+
+The dashboard therefore provides a more interactive management view than a static reporting page.
+
+### Dashboard Visualisation
+
+The dashboard includes six primary analytical charts covering:
+
+- Department workforce distribution
+- Age group distribution
+- Gender distribution
+- Average salary by performance category
+- Promotion rate by performance category
+- Resignation rate by department
+
+### Documentation
+
+Updated:
+
+- `README.md`
+- `documentation/methodology.md`
+- `documentation/workforce_analysis.md`
+- `documentation/data_dictionary.md`
+
+The project documentation now records the completion of Phase 4 and the transition to Phase 5.
+
+### Phase 4 Outcome
+
+The project now contains a completed analytical dashboard that translates the detailed Phase 3 workforce analysis into an interactive executive reporting layer.
+
+### Next Phase
+
+The project is now ready to proceed to:
+
+**Phase 5 — Insights & Business Recommendations**
+
+---
+
 ## [0.4.0] - Phase 3 Complete
 
 ### Added
@@ -112,7 +185,7 @@ The completed Phase 2 Excel workbook was also prepared for inclusion in the repo
 
 ### Next Phase
 
-The project is now ready to proceed to:
+The project was ready to proceed to:
 
 **Phase 3 — Workforce Analysis**
 
@@ -172,7 +245,7 @@ Updated project documentation to reflect completion of Phase 1:
 
 ### Next Phase
 
-The project is now ready to proceed to:
+The project was ready to proceed to:
 
 **Phase 2 — Data Preparation & Excel Data Model**
 
@@ -197,23 +270,3 @@ The project is now ready to proceed to:
 - Added the project objectives.
 - Added the initial data dictionary.
 - Added the project methodology.
-
----
-
-## Upcoming
-
-### Phase 3
-
-Conduct the detailed workforce analysis.
-
-### Phase 4
-
-Develop the HR reporting layer and dashboard.
-
-### Phase 5
-
-Translate analytical findings into HR insights and business recommendations.
-
-### Phase 6
-
-Complete the final project review and portfolio presentation.

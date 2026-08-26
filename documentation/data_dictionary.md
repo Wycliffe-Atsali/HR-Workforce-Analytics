@@ -8,9 +8,9 @@ The analytical grain of the dataset is:
 
 > **One row = one employee**
 
-The dataset contains information covering employee demographics, employment characteristics, compensation, performance, workload, development, employee experience and resignation.
+The dataset contains information covering employee demographics, employment characteristics, compensation, performance, workload, development, employee experience, and resignation.
 
-This document defines the original dataset fields and the additional analytical fields created during the project.
+This document defines the original dataset fields and the additional analytical fields created throughout the project.
 
 ---
 
@@ -43,7 +43,7 @@ This document defines the original dataset fields and the additional analytical 
 
 # Phase 2 Derived Fields
 
-The following fields were created during Phase 2 — Data Preparation & Excel Data Model.
+The following fields were created during **Phase 2 — Data Preparation & Excel Data Model**.
 
 | Field                  | Purpose                                                                 |
 | ---------------------- | ----------------------------------------------------------------------- |
@@ -55,13 +55,15 @@ The following fields were created during Phase 2 — Data Preparation & Excel Da
 | `Promotion_Flag`       | Indicates whether an employee has recorded at least one promotion       |
 | `Resignation_Flag`     | Converts resignation status into a binary analytical flag               |
 
+These fields were created to support validation, segmentation, and subsequent workforce analysis while preserving the original source fields.
+
 ---
 
 # Phase 3 Analytical Grouping Fields
 
-The following fields were created during Phase 3 — Workforce Analysis.
+The following fields were created during **Phase 3 — Workforce Analysis**.
 
-These fields were created to support descriptive analysis and business-friendly grouping of workforce measures.
+These fields were introduced to support descriptive analysis and business-friendly grouping of workforce measures.
 
 | Field                | Source Field                  | Purpose                                                          |
 | -------------------- | ----------------------------- | ---------------------------------------------------------------- |
@@ -83,13 +85,15 @@ These fields were created to support descriptive analysis and business-friendly 
 
 **Groups produced:**
 
-| Satisfaction ScoreGroup |   |
-| ----------------------- | - |
-| 1.00-1.49               | 1 |
-| 1.50-2.49               | 2 |
-| 2.50-3.49               | 3 |
-| 3.50-4.49               | 4 |
-| 4.50-5.00               | 5 |
+| Satisfaction Score Range | Group |
+| ------------------------ | ----: |
+| 1.00–1.49                |     1 |
+| 1.50–2.49                |     2 |
+| 2.50–3.49                |     3 |
+| 3.50–4.49                |     4 |
+| 4.50–5.00                |     5 |
+
+The resulting group values correspond to the rounded satisfaction score and provide a simplified five-level satisfaction dimension for PivotTables and analysis.
 
 ---
 
@@ -105,14 +109,16 @@ These fields were created to support descriptive analysis and business-friendly 
 
 **Groups produced:**
 
-| Work HoursGroup |             |
-| --------------- | ----------- |
-| 30-34           | 30-34 Hours |
-| 35-39           | 35-39 Hours |
-| 40-44           | 40-44 Hours |
-| 45-49           | 45-49 Hours |
-| 50-54           | 50-54 Hours |
-| 55-60           | 55-60 Hours |
+| Work Hours Range | Group       |
+| ---------------- | ----------- |
+| 30–34            | 30-34 Hours |
+| 35–39            | 35-39 Hours |
+| 40–44            | 40-44 Hours |
+| 45–49            | 45-49 Hours |
+| 50–54            | 50-54 Hours |
+| 55–60            | 55-60 Hours |
+
+These categories provide a business-friendly view of weekly workload patterns.
 
 ---
 
@@ -128,13 +134,15 @@ These fields were created to support descriptive analysis and business-friendly 
 
 **Groups produced:**
 
-| Overtime HoursGroup |                    |
-| ------------------- | ------------------ |
-| 0-5                 | Low Overtime       |
-| 6-10                | Moderate Overtime  |
-| 11-15               | High Overtime      |
-| 16-20               | Very High Overtime |
-| 21-29               | Excessive Overtime |
+| Overtime Hours Range | Group              |
+| -------------------- | ------------------ |
+| 0–5                  | Low Overtime       |
+| 6–10                 | Moderate Overtime  |
+| 11–15                | High Overtime      |
+| 16–20                | Very High Overtime |
+| 21–29                | Excessive Overtime |
+
+These categories support workload analysis and allow overtime patterns to be compared across departments, performance categories, satisfaction levels, and resignation status.
 
 ---
 
@@ -207,14 +215,116 @@ The dataset can be broadly organised into the following analytical areas.
 
 ---
 
+# Dashboard Usage
+
+The **Phase 4 — HR Reporting & Dashboard** stage did not introduce additional analytical fields into the dataset.
+
+Instead, the dashboard uses the validated analytical dataset together with:
+
+* PivotTables
+* PivotCharts
+* Slicers
+* KPI calculations
+* Existing derived and analytical grouping fields
+
+The dashboard provides an interactive reporting layer over the workforce analysis.
+
+### Primary Dashboard Filtering Dimensions
+
+The primary dashboard slicers include:
+
+* `Department`
+* `Gender`
+
+Additional fields are used within dashboard KPIs, PivotTables, PivotCharts, and supporting analysis.
+
+The dashboard calculations are based on the validated analytical dataset and its existing derived fields.
+
+---
+
+# Analytical Table
+
+The final analysis-ready dataset is stored in the Excel table:
+
+```text
+tblEmployees
+```
+
+This table contains the original dataset fields together with the validated derived and analytical grouping fields created throughout the project.
+
+---
+
+# Data Quality & Analytical Considerations
+
+The dataset was validated during **Phase 2 — Data Preparation & Excel Data Model** before being used for workforce analysis.
+
+Validation activities included:
+
+* Employee record validation
+* Employee ID uniqueness checks
+* Duplicate identification
+* Missing-value checks
+* Categorical consistency checks
+* Numerical validation
+* Date validation
+* Formatting standardisation
+* Derived-field validation
+* Final analytical quality assurance
+
+The analytical population remains:
+
+**100,000 employees**
+
+The analytical grain remains:
+
+> **One row = one employee**
+
+---
+
+# Analytical Interpretation
+
+The derived and grouping fields in this dictionary are intended primarily for **descriptive and comparative workforce analysis**.
+
+Observed relationships between variables should therefore be interpreted as **associations rather than causal relationships**, unless supported by an appropriate causal research design.
+
+For example, an observed relationship between performance category and average monthly salary should be described as an **observed association** rather than evidence that performance directly causes salary differences.
+
+---
+
 # Data Dictionary Status
 
-**Current status: Updated through Phase 3 — Workforce Analysis**
+**Current status: Updated through Phase 4 — HR Reporting & Dashboard**
 
-The dictionary documents:
+This dictionary documents:
 
 * The original dataset fields
 * Phase 2 derived fields
 * Phase 3 analytical grouping fields
+* Phase 4 dashboard usage
+* The final analytical table
+* Data-quality and analytical interpretation considerations
 
-The analytical population remains **100,000 employees**, with the analytical grain remaining **one row = one employee**.
+### Current Project Position
+
+| Phase                                               | Status       |
+| --------------------------------------------------- | ------------ |
+| **Phase 1 — Project Setup & Analytical Framework**  | **COMPLETE** |
+| **Phase 2 — Data Preparation & Excel Data Model**   | **COMPLETE** |
+| **Phase 3 — Workforce Analysis**                    | **COMPLETE** |
+| **Phase 4 — HR Reporting & Dashboard**              | **COMPLETE** |
+| **Phase 5 — Insights & Business Recommendations**   | **NEXT**     |
+| **Phase 6 — Finalisation & Portfolio Presentation** | **FUTURE**   |
+
+---
+
+## Dataset Summary
+
+| Attribute              | Description                                   |
+| ---------------------- | --------------------------------------------- |
+| Dataset                | Synthetic HR workforce dataset                |
+| Analytical population  | 100,000 employees                             |
+| Analytical grain       | One row = one employee                        |
+| Primary tool           | Microsoft Excel 2016                          |
+| Final analytical table | `tblEmployees`                                |
+| Documentation status   | Updated through Phase 4                       |
+

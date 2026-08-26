@@ -120,8 +120,6 @@ These fields provide standardised categories and indicators for subsequent workf
 
 The derived fields were validated against the full employee population.
 
-The validation results were:
-
 | Derived Field | Validation Result |
 |---|---:|
 | Age Group | 100,000 |
@@ -203,7 +201,7 @@ Additional analytical grouping fields were created where they improved the inter
 - `Work_Hours_Group`
 - `Overtime_Group`
 
-These fields were used to convert continuous or detailed numerical values into more meaningful business categories for comparison and interpretation.
+These fields were used to convert detailed numerical values into more meaningful business categories for comparison and interpretation.
 
 ### Satisfaction Grouping
 
@@ -227,7 +225,7 @@ This supported comparisons between satisfaction levels and workforce outcomes su
 
 `Work_Hours_Per_Week`
 
-The field grouped weekly working hours into the following categories:
+The field grouped weekly working hours into:
 
 - 30-34 Hours
 - 35-39 Hours
@@ -236,15 +234,13 @@ The field grouped weekly working hours into the following categories:
 - 50-54 Hours
 - 55-60 Hours
 
-This supported the analysis of workload patterns across meaningful work-hour ranges.
-
 ### Overtime Grouping
 
 `Overtime_Group` was created from:
 
 `Overtime_Hours`
 
-The field grouped overtime into the following workload categories:
+The field grouped overtime into:
 
 - Low Overtime
 - Moderate Overtime
@@ -252,11 +248,9 @@ The field grouped overtime into the following workload categories:
 - Very High Overtime
 - Excessive Overtime
 
-This supported comparisons between overtime levels and employee outcomes.
-
 ### Analytical Findings
 
-The Phase 3 analysis identified the clearest selected analytical pattern in the relationship between performance category and average monthly salary.
+The Phase 3 analysis identified the clearest segment-level pattern in the relationship between performance category and average monthly salary.
 
 Other analysed measures generally showed limited variation across the workforce segments examined.
 
@@ -299,7 +293,7 @@ The selected findings focused on:
 - Resignation rates.
 - The absence of material differences across several major workforce segments.
 
-These findings provide the foundation for the executive reporting and dashboard stage.
+These findings provided the foundation for the executive reporting and dashboard stage.
 
 **Status: Complete**
 
@@ -307,26 +301,88 @@ These findings provide the foundation for the executive reporting and dashboard 
 
 ## Phase 4 — HR Reporting & Dashboard
 
-The fourth phase will translate the most important analytical findings into an executive-friendly Excel reporting layer and dashboard.
+Phase 4 translated the most important validated findings from Phase 3 into an executive-friendly Excel reporting layer and interactive dashboard.
 
-The reporting stage will focus on the findings that provide the greatest business value and communicate the workforce story clearly.
+### Reporting Objectives
 
-The reporting is expected to include:
+The reporting stage focused on:
 
-- Workforce KPIs.
-- Workforce composition.
-- Compensation benchmarks.
-- Compensation by performance.
-- Promotion indicators.
-- Resignation indicators.
-- Selected comparisons between workforce segments.
-- Key analytical conclusions.
+- Presenting headline workforce KPIs.
+- Communicating workforce composition.
+- Presenting compensation benchmarks.
+- Showing compensation differences across performance categories.
+- Presenting promotion indicators.
+- Presenting resignation indicators.
+- Allowing selected workforce segments to be explored interactively.
 
-The dashboard will prioritise clarity and business relevance rather than attempting to display every analysis completed during Phase 3.
+### Dashboard KPIs
 
-The objective is to create concise reporting that supports HR decision-making rather than simply presenting a large number of charts.
+The dashboard includes five primary KPI indicators:
 
-**Status: Upcoming**
+- Total Employees
+- Average Monthly Salary
+- Median Monthly Salary
+- Promotion Rate
+- Resignation Rate
+
+The KPI cards were connected to the underlying PivotTable calculations where dynamic filtering was supported.
+
+The median monthly salary was retained as an overall workforce benchmark rather than being dynamically recalculated through the dashboard filtering mechanism.
+
+### Dashboard Visualisation
+
+The dashboard contains six primary charts covering:
+
+- Workforce distribution by department.
+- Workforce distribution by age group.
+- Workforce distribution by gender.
+- Average salary by performance category.
+- Promotion rate by performance category.
+- Resignation rate by department.
+
+The charts were arranged into a two-row dashboard layout to provide a balanced presentation while maintaining readability.
+
+### Dashboard Interactivity
+
+Two slicers were incorporated into the dashboard.
+
+The slicers allow users to filter the dashboard by selected workforce dimensions, including:
+
+- Department
+- Gender
+
+The dashboard supports combined filtering, allowing users to examine specific workforce combinations.
+
+The KPI indicators linked to the underlying PivotTable calculations respond dynamically to the selected filters.
+
+### Dashboard Design
+
+The dashboard design prioritised:
+
+- Clear visual hierarchy.
+- Consistent colour usage.
+- Readable chart labels.
+- Appropriate chart sizing.
+- Minimal visual clutter.
+- Consistent KPI formatting.
+- Executive-friendly presentation.
+
+The dashboard intentionally avoids displaying every analysis produced during Phase 3 and instead focuses on the most useful workforce indicators.
+
+### Phase 4 Outcome
+
+Phase 4 produced a completed interactive Excel dashboard that provides an executive-level reporting layer over the validated workforce analysis.
+
+The dashboard allows users to:
+
+- Review headline workforce KPIs.
+- Explore workforce composition.
+- Compare compensation across performance categories.
+- Review promotion patterns.
+- Examine resignation patterns.
+- Filter workforce results by selected dimensions.
+
+**Status: Complete**
 
 ---
 
@@ -416,7 +472,7 @@ The project analyses patterns and associations within the available synthetic da
 
 The analysis should prioritise findings that could reasonably influence HR decision-making.
 
-Not every statistical or numerical difference should automatically be treated as a meaningful business finding.
+Not every numerical difference should automatically be treated as a meaningful business finding.
 
 ---
 
@@ -453,9 +509,10 @@ The project has completed:
 - **Phase 1 — Project Setup & Analytical Framework**
 - **Phase 2 — Data Preparation & Excel Data Model**
 - **Phase 3 — Workforce Analysis**
+- **Phase 4 — HR Reporting & Dashboard**
 
-The dataset has been validated, transformed into an analysis-ready Excel data model and analysed across the major workforce perspectives defined during the project setup.
+The dataset has been validated, transformed into an analysis-ready Excel data model, analysed across the major workforce perspectives and translated into an interactive Excel dashboard.
 
 The project is now ready to proceed to:
 
-**Phase 4 — HR Reporting & Dashboard**
+**Phase 5 — Insights & Business Recommendations**
