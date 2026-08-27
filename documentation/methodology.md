@@ -388,23 +388,67 @@ The dashboard allows users to:
 
 ## Phase 5 — Insights & Business Recommendations
 
-The fifth phase will interpret the findings produced during the workforce analysis and reporting stages.
+Phase 5 interpreted the validated findings from the workforce analysis and reporting stages and translated them into evidence-based HR insights and practical recommendations.
 
-The analytical reasoning framework will be:
+The analytical reasoning framework followed was:
 
-**Finding → Evidence → Business Meaning → Potential Implication → Recommendation**
+**Finding → Evidence → Business Meaning → Recommendation**
 
-Recommendations will:
+### Compensation and Performance
 
-- Be based on observed evidence.
-- Reflect the limitations of the available dataset.
-- Avoid unsupported causal claims.
-- Distinguish between strong findings and areas requiring further investigation.
-- Focus on practical HR relevance.
+The strongest observed segment-level pattern was the progressive increase in average monthly salary across performance categories.
 
-Where the analysis identifies no material differences between workforce segments, this conclusion will also be incorporated into the overall business interpretation where relevant.
+The business interpretation focused on the need to maintain visibility over compensation progression and periodically review whether compensation remains consistent with performance expectations and organisational reward practices.
 
-**Status: Upcoming**
+### Career Development
+
+The overall promotion rate was **66.70%**, with limited variation across the departments, tenure groups and performance categories examined.
+
+The business interpretation did not identify a specific workforce segment requiring immediate intervention.
+
+Instead, the recommendations emphasised expanding future promotion analysis beyond promotion incidence to include measures such as promotion timing, role progression, promotion quality and post-promotion outcomes.
+
+### Retention
+
+The overall resignation rate was **10.01%**.
+
+Resignation rates remained relatively consistent across the major segments examined.
+
+The analysis therefore did not support concentrating retention interventions on a single department, demographic or workforce segment.
+
+The recommendations emphasised organisation-wide monitoring and further investigation using additional explanatory variables.
+
+### Employee Experience and Workload
+
+Satisfaction and overtime groups showed only limited variation in resignation rates.
+
+The recommendations therefore avoided treating either satisfaction or overtime as a proven individual driver of resignation.
+
+Future analysis should investigate combinations of factors and additional employee experience information.
+
+### Workforce Monitoring
+
+Several major workforce outcomes showed limited variation across the groups examined.
+
+This was treated as a meaningful analytical result.
+
+The recommendations therefore emphasised continued monitoring through the dashboard and targeted intervention only where future evidence identifies meaningful variation.
+
+### Phase 5 Outcome
+
+Phase 5 connected the validated analytical findings to practical HR recommendations while maintaining the project's analytical principles.
+
+Recommendations were:
+
+- Based on observed evidence.
+- Focused on practical HR relevance.
+- Limited by the available data.
+- Careful not to present associations as causal relationships.
+- Designed to distinguish between strong findings and areas requiring further investigation.
+
+The completed recommendations provide the business interpretation layer between the analytical findings and the final portfolio presentation.
+
+**Status: Complete**
 
 ---
 
@@ -510,9 +554,10 @@ The project has completed:
 - **Phase 2 — Data Preparation & Excel Data Model**
 - **Phase 3 — Workforce Analysis**
 - **Phase 4 — HR Reporting & Dashboard**
+- **Phase 5 — Insights & Business Recommendations**
 
-The dataset has been validated, transformed into an analysis-ready Excel data model, analysed across the major workforce perspectives and translated into an interactive Excel dashboard.
+The dataset has been validated, transformed into an analysis-ready Excel data model, analysed across the major workforce perspectives, translated into an interactive Excel dashboard and interpreted through evidence-based business insights and recommendations.
 
 The project is now ready to proceed to:
 
-**Phase 5 — Insights & Business Recommendations**
+**Phase 6 — Finalisation & Portfolio Presentation**

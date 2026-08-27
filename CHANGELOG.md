@@ -1,6 +1,69 @@
-# Changelog
+# CHANGELOG
 
 All significant project milestones and structural changes are documented in this file.
+
+---
+
+## [0.6.0] - Phase 5 Complete
+
+### Added
+
+- Completed the Insights & Business Recommendations phase.
+- Interpreted the validated findings from the workforce analysis in business terms.
+- Developed evidence-based HR recommendations.
+- Added recommendations based on compensation and performance findings.
+- Added recommendations relating to career development and promotion monitoring.
+- Added recommendations for organisation-wide retention monitoring.
+- Added recommendations for further investigation of employee resignation drivers.
+- Added recommendations relating to employee experience and workload analysis.
+- Added recommendations for ongoing dashboard-based workforce monitoring.
+- Documented the importance of not targeting workforce segments without sufficient evidence of meaningful variation.
+- Added `documentation/insights_recommendations.md`.
+
+### Key Business Insights
+
+- The clearest observed segment-level pattern remains the progressive increase in average monthly salary across performance categories.
+- Promotion incidence is high at 66.70% and remains broadly consistent across the workforce segments examined.
+- The overall resignation rate is 10.01%, with no single segment showing substantially different resignation levels within the descriptive analysis.
+- Satisfaction and overtime groups did not identify a major retention-risk segment.
+- Several workforce outcomes showed limited variation across the groups examined.
+- The absence of material differences was treated as a valid analytical finding.
+
+### Recommendations
+
+The Phase 5 recommendations focus on:
+
+- Monitoring compensation progression across performance levels.
+- Expanding promotion analysis beyond promotion incidence alone.
+- Maintaining broad organisation-wide retention monitoring.
+- Collecting or analysing additional variables to investigate resignation drivers.
+- Avoiding unsupported assumptions about satisfaction or workload as single causes of resignation.
+- Using the completed dashboard for ongoing workforce monitoring.
+- Applying targeted interventions only when future evidence identifies meaningful differences.
+
+### Documentation
+
+Updated:
+
+- `README.md`
+- `documentation/methodology.md`
+- `documentation/data_dictionary.md`
+
+Added:
+
+- `documentation/insights_recommendations.md`
+
+### Phase 5 Outcome
+
+The project now contains a complete evidence-based interpretation layer connecting the workforce analysis and dashboard findings to practical HR recommendations.
+
+The recommendations are based on observed patterns within the available synthetic dataset and do not present associations as causal relationships.
+
+### Next Phase
+
+The project is now ready to proceed to:
+
+**Phase 6 — Finalisation & Portfolio Presentation**
 
 ---
 
@@ -71,7 +134,7 @@ The project now contains a completed analytical dashboard that translates the de
 
 ### Next Phase
 
-The project is now ready to proceed to:
+The project was ready to proceed to:
 
 **Phase 5 — Insights & Business Recommendations**
 
@@ -113,7 +176,7 @@ The project is now ready to proceed to:
 
 ### Next Phase
 
-Phase 4 will translate the strongest validated findings into an executive-friendly HR reporting layer and dashboard.
+Phase 4 would translate the strongest validated findings into an executive-friendly HR reporting layer and dashboard.
 
 ---
 

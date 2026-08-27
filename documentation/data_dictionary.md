@@ -85,13 +85,13 @@ These fields were introduced to support descriptive analysis and business-friend
 
 **Groups produced:**
 
-| Satisfaction Score Range | Group |
-| ------------------------ | ----: |
-| 1.00–1.49                |     1 |
-| 1.50–2.49                |     2 |
-| 2.50–3.49                |     3 |
-| 3.50–4.49                |     4 |
-| 4.50–5.00                |     5 |
+| Satisfaction Score RangeGroup |   |
+| ----------------------------- | - |
+| 1.00–1.49                     | 1 |
+| 1.50–2.49                     | 2 |
+| 2.50–3.49                     | 3 |
+| 3.50–4.49                     | 4 |
+| 4.50–5.00                     | 5 |
 
 The resulting group values correspond to the rounded satisfaction score and provide a simplified five-level satisfaction dimension for PivotTables and analysis.
 
@@ -103,20 +103,23 @@ The resulting group values correspond to the rounded satisfaction score and prov
 
 **Formula:**
 
-```excel
+```
+```
+
+```text
 =IF([@[Work_Hours_Per_Week]]<=34,"30-34 Hours",IF([@[Work_Hours_Per_Week]]<=39,"35-39 Hours",IF([@[Work_Hours_Per_Week]]<=44,"40-44 Hours",IF([@[Work_Hours_Per_Week]]<=49,"45-49 Hours",IF([@[Work_Hours_Per_Week]]<=54,"50-54 Hours","55-60 Hours")))))
 ```
 
 **Groups produced:**
 
-| Work Hours Range | Group       |
-| ---------------- | ----------- |
-| 30–34            | 30-34 Hours |
-| 35–39            | 35-39 Hours |
-| 40–44            | 40-44 Hours |
-| 45–49            | 45-49 Hours |
-| 50–54            | 50-54 Hours |
-| 55–60            | 55-60 Hours |
+| Work Hours RangeGroup |             |
+| --------------------- | ----------- |
+| 30–34                 | 30-34 Hours |
+| 35–39                 | 35-39 Hours |
+| 40–44                 | 40-44 Hours |
+| 45–49                 | 45-49 Hours |
+| 50–54                 | 50-54 Hours |
+| 55–60                 | 55-60 Hours |
 
 These categories provide a business-friendly view of weekly workload patterns.
 
@@ -128,19 +131,22 @@ These categories provide a business-friendly view of weekly workload patterns.
 
 **Formula:**
 
-```excel
+```
+```
+
+```text
 =IF([@[Overtime_Hours]]<=5,"Low Overtime",IF([@[Overtime_Hours]]<=10,"Moderate Overtime",IF([@[Overtime_Hours]]<=15,"High Overtime",IF([@[Overtime_Hours]]<=20,"Very High Overtime","Excessive Overtime"))))
 ```
 
 **Groups produced:**
 
-| Overtime Hours Range | Group              |
-| -------------------- | ------------------ |
-| 0–5                  | Low Overtime       |
-| 6–10                 | Moderate Overtime  |
-| 11–15                | High Overtime      |
-| 16–20                | Very High Overtime |
-| 21–29                | Excessive Overtime |
+| Overtime Hours RangeGroup |                    |
+| ------------------------- | ------------------ |
+| 0–5                       | Low Overtime       |
+| 6–10                      | Moderate Overtime  |
+| 11–15                     | High Overtime      |
+| 16–20                     | Very High Overtime |
+| 21–29                     | Excessive Overtime |
 
 These categories support workload analysis and allow overtime patterns to be compared across departments, performance categories, satisfaction levels, and resignation status.
 
@@ -242,9 +248,24 @@ The dashboard calculations are based on the validated analytical dataset and its
 
 ---
 
+# Phase 5 Usage
+
+The **Phase 5 — Insights & Business Recommendations** stage did not introduce additional dataset fields or transformations.
+
+Phase 5 used the validated fields, metrics, analytical groupings and findings already established during Phases 2 through 4.
+
+The phase focused on interpreting the existing analytical results and translating them into practical HR recommendations.
+
+No new analytical fields were required.
+
+---
+
 # Analytical Table
 
 The final analysis-ready dataset is stored in the Excel table:
+
+```
+```
 
 ```text
 tblEmployees
@@ -289,11 +310,13 @@ Observed relationships between variables should therefore be interpreted as **as
 
 For example, an observed relationship between performance category and average monthly salary should be described as an **observed association** rather than evidence that performance directly causes salary differences.
 
+This principle was maintained throughout the workforce analysis, dashboard reporting and Phase 5 recommendations.
+
 ---
 
 # Data Dictionary Status
 
-**Current status: Updated through Phase 4 — HR Reporting & Dashboard**
+**Current status: Updated through Phase 5 — Insights & Business Recommendations**
 
 This dictionary documents:
 
@@ -301,30 +324,30 @@ This dictionary documents:
 * Phase 2 derived fields
 * Phase 3 analytical grouping fields
 * Phase 4 dashboard usage
+* Phase 5 analytical usage
 * The final analytical table
 * Data-quality and analytical interpretation considerations
 
 ### Current Project Position
 
-| Phase                                               | Status       |
+| PhaseStatus                                         |              |
 | --------------------------------------------------- | ------------ |
 | **Phase 1 — Project Setup & Analytical Framework**  | **COMPLETE** |
 | **Phase 2 — Data Preparation & Excel Data Model**   | **COMPLETE** |
 | **Phase 3 — Workforce Analysis**                    | **COMPLETE** |
 | **Phase 4 — HR Reporting & Dashboard**              | **COMPLETE** |
-| **Phase 5 — Insights & Business Recommendations**   | **NEXT**     |
-| **Phase 6 — Finalisation & Portfolio Presentation** | **FUTURE**   |
+| **Phase 5 — Insights & Business Recommendations**   | **COMPLETE** |
+| **Phase 6 — Finalisation & Portfolio Presentation** | **NEXT**     |
 
 ---
 
 ## Dataset Summary
 
-| Attribute              | Description                                   |
-| ---------------------- | --------------------------------------------- |
-| Dataset                | Synthetic HR workforce dataset                |
-| Analytical population  | 100,000 employees                             |
-| Analytical grain       | One row = one employee                        |
-| Primary tool           | Microsoft Excel 2016                          |
-| Final analytical table | `tblEmployees`                                |
-| Documentation status   | Updated through Phase 4                       |
-
+| AttributeDescription   |                                |
+| ---------------------- | ------------------------------ |
+| Dataset                | Synthetic HR workforce dataset |
+| Analytical population  | 100,000 employees              |
+| Analytical grain       | One row = one employee         |
+| Primary tool           | Microsoft Excel 2016           |
+| Final analytical table | `tblEmployees`                 |
+| Documentation status   | Updated through Phase 5        |

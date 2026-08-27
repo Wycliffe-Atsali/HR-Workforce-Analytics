@@ -1,5 +1,3 @@
-# HR Workforce Analytics
-
 ## Project Overview
 
 The **HR Workforce Analytics** project is an Excel-based workforce analysis designed to transform employee-level HR data into meaningful business insights.
@@ -151,9 +149,18 @@ The dashboard includes:
 
 ## Phase 5 — Insights & Business Recommendations
 
-Interpret the validated analytical findings and translate them into evidence-based HR insights and practical recommendations.
+Interpreted the validated analytical findings and translated them into evidence-based HR insights and practical recommendations.
 
-**Status: Upcoming**
+The recommendations focus on:
+
+* Maintaining and monitoring the positive relationship between performance and compensation.
+* Investigating the high overall promotion rate and monitoring promotion quality.
+* Maintaining broad workforce and retention monitoring rather than focusing on a single high-risk segment.
+* Investigating employee resignation using additional explanatory data.
+* Using the dashboard as an ongoing workforce monitoring and management tool.
+* Applying targeted interventions only where future evidence identifies meaningful variation.
+
+**Status: Complete**
 
 ## Phase 6 — Finalisation & Portfolio Presentation
 
@@ -171,7 +178,7 @@ Complete final quality assurance, documentation, repository review and portfolio
 | 2     | Data Preparation & Excel Data Model   | Complete |
 | 3     | Workforce Analysis                    | Complete |
 | 4     | HR Reporting & Dashboard              | Complete |
-| 5     | Insights & Recommendations            | Upcoming |
+| 5     | Insights & Recommendations            | Complete |
 | 6     | Finalisation & Portfolio Presentation | Upcoming |
 
 ---
@@ -397,63 +404,109 @@ The objective was to create a reporting layer that communicates the workforce st
 
 ---
 
-# Phase 4 Analytical Outcome
+# Phase 5 — Insights & Business Recommendations
 
-The completed dashboard provides an interactive reporting layer over the validated workforce analysis.
+Phase 5 translated the validated findings from the workforce analysis into practical business insights and recommendations.
 
-It allows HR stakeholders to:
+The recommendations were developed using the following reasoning framework:
 
-* Review headline workforce KPIs.
-* Understand workforce composition.
-* Compare compensation across performance categories.
-* Review promotion patterns.
-* Examine resignation patterns.
-* Filter the dashboard by selected workforce segments.
-* Explore the workforce from a more focused management perspective.
+**Finding → Evidence → Business Meaning → Recommendation**
 
-The dashboard therefore serves as the bridge between the detailed Phase 3 analysis and the business interpretation that will be developed during Phase 5.
+## Key Insights
+
+### Compensation and Performance
+
+The strongest observed segment-level pattern was the progressive increase in average monthly salary across performance categories.
+
+**Business Insight:** The organisation shows a clear association between higher performance categories and higher average compensation.
+
+**Recommendation:** HR should maintain regular monitoring of compensation across performance levels and periodically review whether the observed progression remains consistent, fair and aligned with the organisation's reward philosophy.
+
+### Career Development
+
+The overall promotion rate was **66.70%**, with limited variation across departments, tenure groups and performance categories.
+
+**Business Insight:** Promotion incidence is high and broadly consistent across the workforce, but the consistency also means the available analysis does not identify a specific group requiring immediate intervention.
+
+**Recommendation:** HR should supplement promotion monitoring with additional measures such as promotion timing, role progression, promotion quality and post-promotion outcomes to better understand the effectiveness of career development.
+
+### Retention
+
+The overall resignation rate was **10.01%**, and no single segment showed substantially different resignation levels.
+
+**Business Insight:** The descriptive analysis does not support concentrating retention interventions on one specific demographic or workforce segment.
+
+**Recommendation:** Maintain organisation-wide retention monitoring and collect or analyse additional explanatory variables to investigate the underlying reasons for employee resignation.
+
+### Employee Experience and Workload
+
+Resignation rates showed limited variation across satisfaction and overtime groups.
+
+**Business Insight:** Satisfaction and overtime differences alone did not identify a major retention-risk segment within the descriptive analysis.
+
+**Recommendation:** Avoid assuming that a single satisfaction or workload category is driving resignation. Future analysis should investigate combinations of factors and additional employee experience information.
+
+### Workforce Monitoring
+
+Several major workforce measures showed limited variation across the analysed segments.
+
+**Business Insight:** The absence of large differences is itself a meaningful finding and suggests that management should avoid creating targeted interventions without sufficient evidence.
+
+**Recommendation:** Use the completed dashboard for ongoing monitoring and investigate new patterns only when meaningful deviations emerge.
+
+A detailed record of the insights and recommendations is available in:
+
+`documentation/insights_recommendations.md`
+
+**Status: Complete**
 
 ---
 
-# Next Phase
+# Current Project Position
+
+Phases 1 through 5 have now been completed:
+
+* **Phase 1 — Project Setup & Analytical Framework**
+* **Phase 2 — Data Preparation & Excel Data Model**
+* **Phase 3 — Workforce Analysis**
+* **Phase 4 — HR Reporting & Dashboard**
+* **Phase 5 — Insights & Business Recommendations**
 
 The project is now ready to proceed to:
 
-> **Phase 5 — Insights & Business Recommendations**
-
-Phase 5 will interpret the validated analytical findings and translate them into evidence-based business insights and practical HR recommendations.
+> **Phase 6 — Finalisation & Portfolio Presentation**
 
 ---
 
 # Project Structure
 
-```text
+```text id="4slxy5"
 HR-Workforce-Analytics/
-
 │
 ├── documentation/
 │   ├── business_scenario.md
 │   ├── project_objectives.md
 │   ├── data_dictionary.md
 │   ├── methodology.md
-│   └── workforce_analysis.md
+│   ├── workforce_analysis.md
+│   └── insights_recommendations.md
 │
 ├── HR_Workforce_Analytics.xlsx
 ├── README.md
 ├── CHANGELOG.md
 └── .gitignore
+```
 
-## Analytical Principles
+# Analytical Principles
 
 The project follows several core analytical principles:
 
-1. **Business First** — Analysis begins with business questions. 
-2. **Data Quality Before Analysis** — Data is validated before interpretation. 
-3. **Preserve the Raw Data** — The original dataset remains unchanged. 
-4. **Purposeful Transformation** — Derived fields are created only when analytically useful. 
-5. **Association Does Not Equal Causation** — Observed relationships are not automatically interpreted as causal. 
-6. **Business Relevance** — Findings are prioritised according to their potential business value. 
-7. **Meaningful Differences Matter** — Small differences are not overstated. 
-8. **Reproducibility** — Important analytical decisions are documented. 
+1. **Business First** — Analysis begins with business questions.
+2. **Data Quality Before Analysis** — Data is validated before interpretation.
+3. **Preserve the Raw Data** — The original dataset remains unchanged.
+4. **Purposeful Transformation** — Derived fields are created only when analytically useful.
+5. **Association Does Not Equal Causation** — Observed relationships are not automatically interpreted as causal.
+6. **Business Relevance** — Findings are prioritised according to their potential business value.
+7. **Meaningful Differences Matter** — Small differences are not overstated.
+8. **Reproducibility** — Important analytical decisions are documented.
 9. **Progressive Documentation** — Documentation is updated as each phase is completed.
-```
