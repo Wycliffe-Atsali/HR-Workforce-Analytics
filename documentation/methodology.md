@@ -6,12 +6,13 @@ The HR Workforce Analytics project follows a structured six-phase analytical wor
 
 The methodology is intended to ensure that:
 
-- Business questions are defined before analysis.
-- Data quality is assessed before interpretation.
-- Analytical decisions are documented.
-- Findings are supported by evidence.
-- Insights are translated into practical business recommendations.
-- Observed patterns are not incorrectly presented as causal relationships.
+* Business questions are defined before analysis.
+* Data quality is assessed before interpretation.
+* Analytical decisions are documented.
+* Findings are supported by evidence.
+* Insights are translated into practical business recommendations.
+* Observed patterns are not incorrectly presented as causal relationships.
+* Final project deliverables are reviewed and prepared for portfolio presentation.
 
 The overall workflow is:
 
@@ -27,33 +28,33 @@ The first phase established the foundation of the project.
 
 Activities completed included:
 
-- Defining the business scenario.
-- Identifying the business problem.
-- Establishing the primary and supporting project objectives.
-- Identifying key stakeholders.
-- Defining analytical scope.
-- Establishing business questions.
-- Identifying relevant workforce analytical perspectives.
-- Establishing analytical principles.
-- Defining the overall project methodology.
-- Establishing project success criteria.
+* Defining the business scenario.
+* Identifying the business problem.
+* Establishing the primary and supporting project objectives.
+* Identifying key stakeholders.
+* Defining analytical scope.
+* Establishing business questions.
+* Identifying relevant workforce analytical perspectives.
+* Establishing analytical principles.
+* Defining the overall project methodology.
+* Establishing project success criteria.
 
 The analytical perspectives established during this phase are:
 
-- Workforce Composition
-- Compensation
-- Performance
-- Productivity & Workload
-- Career Development
-- Employee Experience
-- Retention
+* Workforce Composition
+* Compensation
+* Performance
+* Productivity & Workload
+* Career Development
+* Employee Experience
+* Retention
 
 The primary stakeholders identified are:
 
-- HR Leadership
-- HR Business Partners
-- Department Managers
-- Senior Management
+* HR Leadership
+* HR Business Partners
+* Department Managers
+* Senior Management
 
 The project distinguishes between observed associations and causal relationships throughout the analysis.
 
@@ -85,14 +86,14 @@ The analytical grain remained:
 
 The dataset was checked for:
 
-- Employee ID validity.
-- Duplicate Employee IDs.
-- Missing values.
-- Categorical consistency.
-- Numerical validity.
-- Date validity.
-- Formatting and text consistency.
-- General data-quality issues.
+* Employee ID validity.
+* Duplicate Employee IDs.
+* Missing values.
+* Categorical consistency.
+* Numerical validity.
+* Date validity.
+* Formatting and text consistency.
+* General data-quality issues.
 
 No meaningful duplicate, missing-value or categorical/numerical consistency issues were identified during the validation process.
 
@@ -106,13 +107,13 @@ was retained because it supports the Data Quality worksheet and validation proce
 
 The following analytical fields were created:
 
-- `Duplicate_ID_Check`
-- `Age_Group`
-- `Tenure_Group`
-- `Salary_Band`
-- `Performance_Category`
-- `Promotion_Flag`
-- `Resignation_Flag`
+* `Duplicate_ID_Check`
+* `Age_Group`
+* `Tenure_Group`
+* `Salary_Band`
+* `Performance_Category`
+* `Promotion_Flag`
+* `Resignation_Flag`
 
 These fields provide standardised categories and indicators for subsequent workforce analysis.
 
@@ -120,14 +121,14 @@ These fields provide standardised categories and indicators for subsequent workf
 
 The derived fields were validated against the full employee population.
 
-| Derived Field | Validation Result |
-|---|---:|
-| Age Group | 100,000 |
-| Tenure Group | 100,000 |
-| Performance Category | 100,000 |
-| Promotion Flag | 100,000 |
-| Resignation Flag | 100,000 |
-| Salary Band | 100,000 |
+| Derived Field        | Validation Result |
+| -------------------- | ----------------: |
+| Age Group            |           100,000 |
+| Tenure Group         |           100,000 |
+| Performance Category |           100,000 |
+| Promotion Flag       |           100,000 |
+| Resignation Flag     |           100,000 |
+| Salary Band          |           100,000 |
 
 The `11+ Years` tenure category contained zero employees. This reflects the distribution of the source dataset and does not indicate a formula error.
 
@@ -141,9 +142,9 @@ Each reconciled to:
 
 This confirmed that:
 
-- The employee population remained unchanged.
-- The resignation flag reconciled to the full population.
-- The promotion flag reconciled to the full population.
+* The employee population remained unchanged.
+* The resignation flag reconciled to the full population.
+* The promotion flag reconciled to the full population.
 
 ### Phase 2 Outcome
 
@@ -171,23 +172,23 @@ The third phase converted the prepared employee dataset into structured workforc
 
 The analysis examined:
 
-- Workforce composition.
-- Demographics.
-- Department structure.
-- Compensation.
-- Performance.
-- Workload.
-- Career development.
-- Employee experience.
-- Resignation and retention.
+* Workforce composition.
+* Demographics.
+* Department structure.
+* Compensation.
+* Performance.
+* Workload.
+* Career development.
+* Employee experience.
+* Resignation and retention.
 
 The analysis focused on:
 
-- Distributions.
-- Comparisons.
-- Relationships between variables.
-- Workforce segments.
-- Potential areas requiring management attention.
+* Distributions.
+* Comparisons.
+* Relationships between variables.
+* Workforce segments.
+* Potential areas requiring management attention.
 
 The general analytical structure followed was:
 
@@ -197,9 +198,9 @@ The general analytical structure followed was:
 
 Additional analytical grouping fields were created where they improved the interpretation of numerical workforce measures:
 
-- `Satisfaction_Group`
-- `Work_Hours_Group`
-- `Overtime_Group`
+* `Satisfaction_Group`
+* `Work_Hours_Group`
+* `Overtime_Group`
 
 These fields were used to convert detailed numerical values into more meaningful business categories for comparison and interpretation.
 
@@ -211,11 +212,11 @@ These fields were used to convert detailed numerical values into more meaningful
 
 The field grouped employee satisfaction into five standardised levels:
 
-- 1
-- 2
-- 3
-- 4
-- 5
+* 1
+* 2
+* 3
+* 4
+* 5
 
 This supported comparisons between satisfaction levels and workforce outcomes such as resignation.
 
@@ -227,12 +228,12 @@ This supported comparisons between satisfaction levels and workforce outcomes su
 
 The field grouped weekly working hours into:
 
-- 30-34 Hours
-- 35-39 Hours
-- 40-44 Hours
-- 45-49 Hours
-- 50-54 Hours
-- 55-60 Hours
+* 30-34 Hours
+* 35-39 Hours
+* 40-44 Hours
+* 45-49 Hours
+* 50-54 Hours
+* 55-60 Hours
 
 ### Overtime Grouping
 
@@ -242,11 +243,11 @@ The field grouped weekly working hours into:
 
 The field grouped overtime into:
 
-- Low Overtime
-- Moderate Overtime
-- High Overtime
-- Very High Overtime
-- Excessive Overtime
+* Low Overtime
+* Moderate Overtime
+* High Overtime
+* Very High Overtime
+* Excessive Overtime
 
 ### Analytical Findings
 
@@ -256,9 +257,9 @@ Other analysed measures generally showed limited variation across the workforce 
 
 These included:
 
-- Promotion rates across tenure groups, departments and performance categories.
-- Average training hours across departments.
-- Resignation rates across demographic, compensation, performance, promotion, satisfaction and workload segments.
+* Promotion rates across tenure groups, departments and performance categories.
+* Average training hours across departments.
+* Resignation rates across demographic, compensation, performance, promotion, satisfaction and workload segments.
 
 The overall promotion rate was:
 
@@ -286,12 +287,12 @@ Phase 3 produced a structured workforce analysis and identified the most relevan
 
 The selected findings focused on:
 
-- Workforce composition.
-- Compensation by performance.
-- Overall compensation benchmarks.
-- Promotion rates.
-- Resignation rates.
-- The absence of material differences across several major workforce segments.
+* Workforce composition.
+* Compensation by performance.
+* Overall compensation benchmarks.
+* Promotion rates.
+* Resignation rates.
+* The absence of material differences across several major workforce segments.
 
 These findings provided the foundation for the executive reporting and dashboard stage.
 
@@ -307,23 +308,23 @@ Phase 4 translated the most important validated findings from Phase 3 into an ex
 
 The reporting stage focused on:
 
-- Presenting headline workforce KPIs.
-- Communicating workforce composition.
-- Presenting compensation benchmarks.
-- Showing compensation differences across performance categories.
-- Presenting promotion indicators.
-- Presenting resignation indicators.
-- Allowing selected workforce segments to be explored interactively.
+* Presenting headline workforce KPIs.
+* Communicating workforce composition.
+* Presenting compensation benchmarks.
+* Showing compensation differences across performance categories.
+* Presenting promotion indicators.
+* Presenting resignation indicators.
+* Allowing selected workforce segments to be explored interactively.
 
 ### Dashboard KPIs
 
 The dashboard includes five primary KPI indicators:
 
-- Total Employees
-- Average Monthly Salary
-- Median Monthly Salary
-- Promotion Rate
-- Resignation Rate
+* Total Employees
+* Average Monthly Salary
+* Median Monthly Salary
+* Promotion Rate
+* Resignation Rate
 
 The KPI cards were connected to the underlying PivotTable calculations where dynamic filtering was supported.
 
@@ -333,12 +334,12 @@ The median monthly salary was retained as an overall workforce benchmark rather 
 
 The dashboard contains six primary charts covering:
 
-- Workforce distribution by department.
-- Workforce distribution by age group.
-- Workforce distribution by gender.
-- Average salary by performance category.
-- Promotion rate by performance category.
-- Resignation rate by department.
+* Workforce distribution by department.
+* Workforce distribution by age group.
+* Workforce distribution by gender.
+* Average salary by performance category.
+* Promotion rate by performance category.
+* Resignation rate by department.
 
 The charts were arranged into a two-row dashboard layout to provide a balanced presentation while maintaining readability.
 
@@ -348,8 +349,8 @@ Two slicers were incorporated into the dashboard.
 
 The slicers allow users to filter the dashboard by selected workforce dimensions, including:
 
-- Department
-- Gender
+* Department
+* Gender
 
 The dashboard supports combined filtering, allowing users to examine specific workforce combinations.
 
@@ -359,13 +360,13 @@ The KPI indicators linked to the underlying PivotTable calculations respond dyna
 
 The dashboard design prioritised:
 
-- Clear visual hierarchy.
-- Consistent colour usage.
-- Readable chart labels.
-- Appropriate chart sizing.
-- Minimal visual clutter.
-- Consistent KPI formatting.
-- Executive-friendly presentation.
+* Clear visual hierarchy.
+* Consistent colour usage.
+* Readable chart labels.
+* Appropriate chart sizing.
+* Minimal visual clutter.
+* Consistent KPI formatting.
+* Executive-friendly presentation.
 
 The dashboard intentionally avoids displaying every analysis produced during Phase 3 and instead focuses on the most useful workforce indicators.
 
@@ -375,12 +376,14 @@ Phase 4 produced a completed interactive Excel dashboard that provides an execut
 
 The dashboard allows users to:
 
-- Review headline workforce KPIs.
-- Explore workforce composition.
-- Compare compensation across performance categories.
-- Review promotion patterns.
-- Examine resignation patterns.
-- Filter workforce results by selected dimensions.
+* Review headline workforce KPIs.
+* Explore workforce composition.
+* Compare compensation across performance categories.
+* Review promotion patterns.
+* Examine resignation patterns.
+* Filter workforce results by selected dimensions.
+
+A PDF snapshot of the completed dashboard was also prepared as a portfolio deliverable.
 
 **Status: Complete**
 
@@ -388,65 +391,35 @@ The dashboard allows users to:
 
 ## Phase 5 — Insights & Business Recommendations
 
-Phase 5 interpreted the validated findings from the workforce analysis and reporting stages and translated them into evidence-based HR insights and practical recommendations.
+The fifth phase interpreted the findings produced during the workforce analysis and reporting stages.
 
-The analytical reasoning framework followed was:
+The analytical reasoning framework was:
 
 **Finding → Evidence → Business Meaning → Recommendation**
 
-### Compensation and Performance
+Recommendations were:
 
-The strongest observed segment-level pattern was the progressive increase in average monthly salary across performance categories.
+* Based on observed evidence.
+* Developed within the limitations of the available dataset.
+* Written without unsupported causal claims.
+* Used to distinguish strong findings from areas requiring further investigation.
+* Focused on practical HR relevance.
 
-The business interpretation focused on the need to maintain visibility over compensation progression and periodically review whether compensation remains consistent with performance expectations and organisational reward practices.
-
-### Career Development
-
-The overall promotion rate was **66.70%**, with limited variation across the departments, tenure groups and performance categories examined.
-
-The business interpretation did not identify a specific workforce segment requiring immediate intervention.
-
-Instead, the recommendations emphasised expanding future promotion analysis beyond promotion incidence to include measures such as promotion timing, role progression, promotion quality and post-promotion outcomes.
-
-### Retention
-
-The overall resignation rate was **10.01%**.
-
-Resignation rates remained relatively consistent across the major segments examined.
-
-The analysis therefore did not support concentrating retention interventions on a single department, demographic or workforce segment.
-
-The recommendations emphasised organisation-wide monitoring and further investigation using additional explanatory variables.
-
-### Employee Experience and Workload
-
-Satisfaction and overtime groups showed only limited variation in resignation rates.
-
-The recommendations therefore avoided treating either satisfaction or overtime as a proven individual driver of resignation.
-
-Future analysis should investigate combinations of factors and additional employee experience information.
-
-### Workforce Monitoring
-
-Several major workforce outcomes showed limited variation across the groups examined.
-
-This was treated as a meaningful analytical result.
-
-The recommendations therefore emphasised continued monitoring through the dashboard and targeted intervention only where future evidence identifies meaningful variation.
+Where the analysis identified no material differences between workforce segments, this conclusion was incorporated into the overall business interpretation rather than being overstated as a problem.
 
 ### Phase 5 Outcome
 
-Phase 5 connected the validated analytical findings to practical HR recommendations while maintaining the project's analytical principles.
+The completed insights and recommendations focused on:
 
-Recommendations were:
+* Monitoring compensation progression across performance levels.
+* Expanding promotion analysis beyond promotion incidence alone.
+* Maintaining broad organisation-wide retention monitoring.
+* Investigating resignation using additional explanatory data.
+* Avoiding unsupported assumptions about satisfaction or workload as single drivers of resignation.
+* Using the dashboard for ongoing workforce monitoring.
+* Applying targeted interventions only when future evidence identifies meaningful differences.
 
-- Based on observed evidence.
-- Focused on practical HR relevance.
-- Limited by the available data.
-- Careful not to present associations as causal relationships.
-- Designed to distinguish between strong findings and areas requiring further investigation.
-
-The completed recommendations provide the business interpretation layer between the analytical findings and the final portfolio presentation.
+The phase translated descriptive analytical findings into practical business recommendations while maintaining the distinction between observed associations and causal conclusions.
 
 **Status: Complete**
 
@@ -454,23 +427,67 @@ The completed recommendations provide the business interpretation layer between 
 
 ## Phase 6 — Finalisation & Portfolio Presentation
 
-The final phase will prepare the project for completion and portfolio presentation.
+The final phase reviewed and prepared the completed project for portfolio presentation.
 
-Planned activities include:
+### Final Workbook and Deliverable Review
 
-- Final quality assurance.
-- Documentation review.
-- README refinement.
-- Repository structure review.
-- Changelog update.
-- Final workbook review.
-- Final project summary.
-- Portfolio presentation.
-- Project retrospective.
+The final review confirmed the completed Excel workbook and its major deliverables, including:
 
-The final review will confirm that the workbook, documentation and repository accurately represent the completed analytical workflow.
+* The validated analysis-ready dataset.
+* The supporting analytical worksheets.
+* PivotTable analysis.
+* The completed interactive HR dashboard.
+* KPI calculations and dashboard interactivity.
+* The completed analytical workflow from data preparation through recommendations.
 
-**Status: Upcoming**
+A PDF snapshot of the dashboard was included as an additional portfolio-friendly deliverable.
+
+### Repository Review
+
+The repository structure was reviewed to confirm that the completed project deliverables and documentation were present and consistently organised.
+
+The final repository includes:
+
+* The completed Excel workbook.
+* The dashboard PDF snapshot.
+* Project documentation covering the completed workflow.
+* The README project overview and final summary.
+* The changelog recording major project milestones.
+* Version-control configuration.
+
+### Documentation Review
+
+The final documentation review ensured that:
+
+* All six phases are represented in the project documentation.
+* Completed phase statuses are aligned across the repository.
+* The project structure reflects the actual repository contents.
+* The final dashboard deliverable is documented.
+* The methodology accurately reflects the completed workflow.
+* No phase remains incorrectly marked as upcoming.
+
+### Portfolio Presentation Review
+
+The final presentation review confirmed that a repository visitor can understand:
+
+* The business scenario.
+* The project objectives.
+* The dataset and analytical grain.
+* The analytical methodology.
+* The data preparation process.
+* The workforce analysis.
+* The dashboard and reporting layer.
+* The key business insights.
+* The recommendations.
+* The completed end-to-end project workflow.
+
+### Phase 6 Outcome
+
+Phase 6 formally completed the project.
+
+The project is now prepared as a portfolio-ready example of an end-to-end Excel-based workforce analytics workflow.
+
+**Status: Complete**
 
 ---
 
@@ -538,26 +555,27 @@ Important analytical decisions, transformations, metrics and derived fields shou
 
 ## 9. Progressive Documentation
 
-Project documentation will be developed alongside the analysis.
+Project documentation was developed alongside the analysis.
 
-Information will be added or updated as each phase is completed rather than documenting the entire project in advance.
+Information was added or updated as each phase was completed rather than documenting the entire project in advance.
 
-This ensures that the repository accurately reflects the actual development of the project at each stage.
+This ensured that the repository reflected the actual development of the project at each stage.
 
 ---
 
 # Current Methodology Status
 
-The project has completed:
+All six phases of the project have been completed:
 
-- **Phase 1 — Project Setup & Analytical Framework**
-- **Phase 2 — Data Preparation & Excel Data Model**
-- **Phase 3 — Workforce Analysis**
-- **Phase 4 — HR Reporting & Dashboard**
-- **Phase 5 — Insights & Business Recommendations**
+* **Phase 1 — Project Setup & Analytical Framework**
+* **Phase 2 — Data Preparation & Excel Data Model**
+* **Phase 3 — Workforce Analysis**
+* **Phase 4 — HR Reporting & Dashboard**
+* **Phase 5 — Insights & Business Recommendations**
+* **Phase 6 — Finalisation & Portfolio Presentation**
 
-The dataset has been validated, transformed into an analysis-ready Excel data model, analysed across the major workforce perspectives, translated into an interactive Excel dashboard and interpreted through evidence-based business insights and recommendations.
+The dataset was validated, transformed into an analysis-ready Excel data model, analysed across the major workforce perspectives, translated into an interactive dashboard and interpreted through evidence-based business recommendations.
 
-The project is now ready to proceed to:
+The final workbook, dashboard snapshot, repository structure and project documentation were subsequently reviewed and prepared for portfolio presentation.
 
-**Phase 6 — Finalisation & Portfolio Presentation**
+**The HR Workforce Analytics project is complete.**

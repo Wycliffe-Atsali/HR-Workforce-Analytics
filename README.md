@@ -1,3 +1,5 @@
+# HR Workforce Analytics
+
 ## Project Overview
 
 The **HR Workforce Analytics** project is an Excel-based workforce analysis designed to transform employee-level HR data into meaningful business insights.
@@ -164,9 +166,19 @@ The recommendations focus on:
 
 ## Phase 6 — Finalisation & Portfolio Presentation
 
-Complete final quality assurance, documentation, repository review and portfolio presentation.
+Completed the final quality assurance, documentation review, repository review and portfolio presentation preparation.
 
-**Status: Upcoming**
+The finalisation stage included:
+
+* Reviewing the completed Excel workbook and analytical outputs.
+* Confirming the completed interactive dashboard.
+* Including a PDF dashboard snapshot as a portfolio deliverable.
+* Reviewing repository structure and file consistency.
+* Reviewing project documentation for alignment with the completed workflow.
+* Confirming that all six phases of the project are documented.
+* Finalising the project for GitHub and portfolio presentation.
+
+**Status: Complete**
 
 ---
 
@@ -179,7 +191,7 @@ Complete final quality assurance, documentation, repository review and portfolio
 | 3     | Workforce Analysis                    | Complete |
 | 4     | HR Reporting & Dashboard              | Complete |
 | 5     | Insights & Recommendations            | Complete |
-| 6     | Finalisation & Portfolio Presentation | Upcoming |
+| 6     | Finalisation & Portfolio Presentation | Complete |
 
 ---
 
@@ -400,6 +412,14 @@ The dashboard was designed with emphasis on:
 
 The objective was to create a reporting layer that communicates the workforce story clearly without attempting to display every analytical result produced during Phase 3.
 
+A detailed dashboard description is available in:
+
+`documentation/phase_4_dashboard.md`
+
+A PDF snapshot of the completed dashboard is included in the repository as:
+
+`HR_Workforce_Analytics_Dashboard.pdf`
+
 **Status: Complete**
 
 ---
@@ -462,25 +482,61 @@ A detailed record of the insights and recommendations is available in:
 
 ---
 
-# Current Project Position
+# Phase 6 — Finalisation & Portfolio Presentation
 
-Phases 1 through 5 have now been completed:
+Phase 6 completed the final review and preparation of the project as a portfolio-ready analytical deliverable.
 
-* **Phase 1 — Project Setup & Analytical Framework**
-* **Phase 2 — Data Preparation & Excel Data Model**
-* **Phase 3 — Workforce Analysis**
-* **Phase 4 — HR Reporting & Dashboard**
-* **Phase 5 — Insights & Business Recommendations**
+The final review confirmed that:
 
-The project is now ready to proceed to:
+* The six-phase analytical workflow was completed.
+* The analytical population remained documented as **100,000 employees**.
+* The final Excel workbook is included in the repository.
+* The interactive HR dashboard is included in the workbook.
+* A PDF dashboard snapshot is included for portfolio viewing.
+* The repository structure contains the required project deliverables.
+* The documentation reflects the completed analytical workflow from project setup through business recommendations.
+* The project is ready for portfolio presentation and repository publication.
 
-> **Phase 6 — Finalisation & Portfolio Presentation**
+## Final Project Outcome
+
+The completed project demonstrates an end-to-end HR workforce analytics workflow using Microsoft Excel 2016.
+
+The workflow progressed from:
+
+**Business Problem → Data Preparation → Workforce Analysis → Reporting → Recommendations → Finalisation**
+
+The project demonstrates:
+
+* Business problem definition.
+* Analytical framework development.
+* Data validation and quality assurance.
+* Excel data modelling.
+* Derived analytical field creation.
+* Workforce analysis using PivotTables.
+* KPI development.
+* Interactive dashboard reporting.
+* Evidence-based business interpretation.
+* Practical HR recommendations.
+* Documentation and version control.
+* Final portfolio preparation.
+
+**Status: Complete**
+
+---
+
+# Project Completion
+
+All six phases of the HR Workforce Analytics project have been completed.
+
+The final project combines a validated employee-level dataset, structured workforce analysis, an interactive Excel dashboard, evidence-based business recommendations and supporting documentation.
+
+The project is now complete and prepared as a portfolio-ready example of an end-to-end Excel-based workforce analytics workflow.
 
 ---
 
 # Project Structure
 
-```text id="4slxy5"
+```text
 HR-Workforce-Analytics/
 │
 ├── documentation/
@@ -489,24 +545,36 @@ HR-Workforce-Analytics/
 │   ├── data_dictionary.md
 │   ├── methodology.md
 │   ├── workforce_analysis.md
+│   ├── phase_4_dashboard.md
 │   └── insights_recommendations.md
 │
 ├── HR_Workforce_Analytics.xlsx
+├── HR_Workforce_Analytics_Dashboard.pdf
 ├── README.md
 ├── CHANGELOG.md
 └── .gitignore
 ```
+
+---
 
 # Analytical Principles
 
 The project follows several core analytical principles:
 
 1. **Business First** — Analysis begins with business questions.
+
 2. **Data Quality Before Analysis** — Data is validated before interpretation.
+
 3. **Preserve the Raw Data** — The original dataset remains unchanged.
+
 4. **Purposeful Transformation** — Derived fields are created only when analytically useful.
+
 5. **Association Does Not Equal Causation** — Observed relationships are not automatically interpreted as causal.
+
 6. **Business Relevance** — Findings are prioritised according to their potential business value.
+
 7. **Meaningful Differences Matter** — Small differences are not overstated.
+
 8. **Reproducibility** — Important analytical decisions are documented.
+
 9. **Progressive Documentation** — Documentation is updated as each phase is completed.
